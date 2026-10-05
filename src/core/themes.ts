@@ -23,6 +23,15 @@ export const themes: Readonly<Record<string, WordTheme>> = {
 
 const fallback: WordTheme = { id: 'ord', title: 'På oppdagelse', clue: 'Vi leter etter et ord vi kan bli kjent med.', icon: '🧭' };
 
+export function isThemeSelection(value: unknown): value is string {
+  return typeof value === 'string' && (value === 'all' || Object.hasOwn(themes, value));
+}
+
+/** The primary meaning clue also defines the selectable theme. */
+export function belongsToTheme(word: Pick<Word, 'categories'>, theme: string): boolean {
+  return theme === 'all' || getWordTheme(word).id === theme;
+}
+
 /** Categories are ordered: first recognized category supplies the theme clue. */
 export function getWordTheme(word: Pick<Word, 'categories'>): WordTheme {
   for (const category of word.categories) {
