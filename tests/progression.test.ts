@@ -66,6 +66,16 @@ describe('progression', () => {
     assert.equal(getWordTheme(repeat).id,'hav'); assert.equal(repeat.difficulty,4);
     assert.deepEqual(sea.puzzleHistory,[]);
   });
+  it('avoids consecutive replays, even when only easier alternatives exist', () => {
+    const allFound = {...profile,discoveredWords:words.map(w => w.id)};
+    const result = (wordId: string) => ({wordId,guesses:1,hints:[],independent:true,completedAt:'2026-10-05'});
+    const first = generatePuzzleWord(words,allFound,2);
+    assert.notEqual(generatePuzzleWord(words,{...allFound,puzzleHistory:[result(first.id)]},2).id,first.id);
+    const smallPool = words.filter(w => ['nb-rom','nb-måne'].includes(w.id));
+    assert.equal(generatePuzzleWord(smallPool,{...allFound,selectedTheme:'rom',puzzleHistory:[result('nb-måne')]},3).id,'nb-rom');
+    // The engine still supports an intentional replay of a singleton pool.
+    assert.equal(generatePuzzleWord(smallPool,{...allFound,selectedTheme:'rom',puzzleHistory:[result('nb-rom')]},2).id,'nb-rom');
+  });
 });
 describe('local profiles', () => {
   it('round trips isolated player progress and resumable hints', () => {

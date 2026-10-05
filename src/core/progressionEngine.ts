@@ -23,6 +23,11 @@ export function generatePuzzleWord(words: Word[], profile: LocalProfile, level: 
   const ranked = [...pool].sort((a,b) => b.difficulty - a.difficulty);
   const unseen = ranked.find(word => !profile.discoveredWords.includes(word.id));
   if (unseen) return unseen;
-  const repeats = ranked.filter(word => word.difficulty === ranked[0].difficulty);
+  // Avoid consecutive repeats whenever the eligible pool has an alternative,
+  // including an easier word in the same theme.
+  const lastId = profile.puzzleHistory.at(-1)?.wordId;
+  const alternatives = ranked.filter(word => word.id !== lastId);
+  const replayPool = alternatives.length ? alternatives : ranked;
+  const repeats = replayPool.filter(word => word.difficulty === replayPool[0].difficulty);
   return repeats[profile.puzzleHistory.length % repeats.length];
 }
