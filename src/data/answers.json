@@ -1731,5 +1731,1962 @@
       "U",
       "B"
     ]
+  },
+  {
+    "id": "nb-hav",
+    "word": "HAV",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Et hav er et stort område med saltvann.",
+    "example": "Båten seiler på havet.",
+    "image": "🌊",
+    "clueLetters": [
+      "H",
+      "A",
+      "V",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-sel",
+    "word": "SEL",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En sel er et dyr som svømmer og kan hvile på land.",
+    "example": "Selen hviler på et skjær.",
+    "image": "🦭",
+    "clueLetters": [
+      "S",
+      "E",
+      "L",
+      "A",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-alge",
+    "word": "ALGE",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "En alge er noe som vokser i vann og bruker sollys.",
+    "example": "En grønn alge vokser i sjøen.",
+    "image": "🌿",
+    "clueLetters": [
+      "A",
+      "L",
+      "G",
+      "E",
+      "S",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-krabbe",
+    "word": "KRABBE",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "double-consonant",
+      "multi-syllable"
+    ],
+    "definition": "En krabbe er et dyr med skall og klør.",
+    "example": "Krabben går sidelengs på stranda.",
+    "image": "🦀",
+    "clueLetters": [
+      "K",
+      "R",
+      "A",
+      "B",
+      "E",
+      "S",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-manet",
+    "word": "MANET",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En manet er et mykt dyr som lever i vann.",
+    "example": "Vi ser en manet fra brygga.",
+    "image": "🪼",
+    "clueLetters": [
+      "M",
+      "A",
+      "N",
+      "E",
+      "T",
+      "S",
+      "I",
+      "L",
+      "O",
+      "R",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-tang",
+    "word": "TANG",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "Tang er store alger som vokser i sjøen.",
+    "example": "Det ligger tang på stranda.",
+    "image": "🌿",
+    "clueLetters": [
+      "T",
+      "A",
+      "N",
+      "G",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-hval",
+    "word": "HVAL",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En hval er et stort dyr som lever i havet og puster luft.",
+    "example": "Hvalen kommer opp for å puste.",
+    "image": "🐋",
+    "clueLetters": [
+      "H",
+      "V",
+      "A",
+      "L",
+      "S",
+      "E",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-reke",
+    "word": "REKE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En reke er et lite dyr med skall og lange følehorn.",
+    "example": "En reke svømmer ved bunnen.",
+    "image": "🦐",
+    "clueLetters": [
+      "R",
+      "E",
+      "K",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-sand",
+    "word": "SAND",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "Sand er mange små korn av stein.",
+    "example": "Vi bygger et slott av sand.",
+    "image": "🏖️",
+    "clueLetters": [
+      "S",
+      "A",
+      "N",
+      "D",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-anker",
+    "word": "ANKER",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "Et anker holder en båt på plass i vannet.",
+    "example": "Vi senker ankeret fra båten.",
+    "image": "⚓",
+    "clueLetters": [
+      "A",
+      "N",
+      "K",
+      "E",
+      "R",
+      "S",
+      "I",
+      "L",
+      "O",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-åre",
+    "word": "ÅRE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "hav"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En åre brukes til å ro en båt.",
+    "example": "Jeg ror med en åre.",
+    "image": "🛶",
+    "clueLetters": [
+      "Å",
+      "R",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-tur",
+    "word": "TUR",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En tur er når vi drar ut for å gå eller oppleve noe.",
+    "example": "Vi går en tur på fjellet.",
+    "image": "🥾",
+    "clueLetters": [
+      "T",
+      "U",
+      "R",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-sti",
+    "word": "STI",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En sti er en smal vei vi kan gå på.",
+    "example": "Vi følger en sti opp bakken.",
+    "image": "🥾",
+    "clueLetters": [
+      "S",
+      "T",
+      "I",
+      "A",
+      "E",
+      "L",
+      "O",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-vann",
+    "word": "VANN",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "Vann er det vi drikker og finner i bekker og innsjøer.",
+    "example": "Jeg fyller flaska med vann.",
+    "image": "💧",
+    "clueLetters": [
+      "V",
+      "A",
+      "N",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-telt",
+    "word": "TELT",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "Et telt er et lite hus av stoff som vi kan sove i på tur.",
+    "example": "Vi sover i telt ved fjellet.",
+    "image": "⛺",
+    "clueLetters": [
+      "T",
+      "E",
+      "L",
+      "S",
+      "A",
+      "I",
+      "O",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-sekk",
+    "word": "SEKK",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En sekk er noe vi kan bære ting i på ryggen.",
+    "example": "Jeg har mat i sekken min.",
+    "image": "🎒",
+    "clueLetters": [
+      "S",
+      "E",
+      "K",
+      "A",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-stein",
+    "word": "STEIN",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En stein er en hard bit av fjell.",
+    "example": "Jeg finner en rund stein.",
+    "image": "🪨",
+    "clueLetters": [
+      "S",
+      "T",
+      "E",
+      "I",
+      "N",
+      "A",
+      "L",
+      "O",
+      "R",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-topp",
+    "word": "TOPP",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En topp er den øverste delen av et fjell.",
+    "example": "Vi går helt opp til toppen.",
+    "image": "🏔️",
+    "clueLetters": [
+      "T",
+      "O",
+      "P",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-elv",
+    "word": "ELV",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En elv er vann som renner gjennom landskapet.",
+    "example": "En elv renner ned fra fjellet.",
+    "image": "🏞️",
+    "clueLetters": [
+      "E",
+      "L",
+      "V",
+      "S",
+      "A",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-kart",
+    "word": "KART",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "fjell"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "Et kart viser hvor steder ligger.",
+    "example": "Vi finner stien på kartet.",
+    "image": "🗺️",
+    "clueLetters": [
+      "K",
+      "A",
+      "R",
+      "T",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-jord",
+    "word": "JORD",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "rom"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "irregular-spelling"
+    ],
+    "definition": "Jorda er planeten vi bor på.",
+    "example": "Jorda går rundt sola.",
+    "image": "🌍",
+    "clueLetters": [
+      "J",
+      "O",
+      "R",
+      "D",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-rom",
+    "word": "ROM",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "rom"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Verdensrommet er det store rommet utenfor jorda.",
+    "example": "En rakett reiser ut i rommet.",
+    "image": "🌌",
+    "clueLetters": [
+      "R",
+      "O",
+      "M",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-komet",
+    "word": "KOMET",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "rom"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En komet er en klump av is og støv som går rundt sola.",
+    "example": "En komet kan få en lysende hale.",
+    "image": "☄️",
+    "clueLetters": [
+      "K",
+      "O",
+      "M",
+      "E",
+      "T",
+      "S",
+      "A",
+      "I",
+      "L",
+      "R",
+      "N",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-klode",
+    "word": "KLODE",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "rom"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "En klode er et stort, rundt himmellegeme, slik som jorda.",
+    "example": "Jorda er en klode.",
+    "image": "🌐",
+    "clueLetters": [
+      "K",
+      "L",
+      "O",
+      "D",
+      "E",
+      "S",
+      "A",
+      "I",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-meteor",
+    "word": "METEOR",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "rom"
+    ],
+    "syllables": 3,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En meteor er lyssporet vi ser når en liten bit fra rommet kommer inn i lufta rundt jorda.",
+    "example": "Vi ser en meteor lyse på nattehimmelen.",
+    "image": "🌠",
+    "clueLetters": [
+      "M",
+      "E",
+      "T",
+      "O",
+      "R",
+      "S",
+      "A",
+      "I",
+      "L",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-nese",
+    "word": "NESE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Nesa bruker vi til å lukte og puste med.",
+    "example": "Jeg lukter på blomsten med nesa.",
+    "image": "👃",
+    "clueLetters": [
+      "N",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-munn",
+    "word": "MUNN",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "Munnen bruker vi til å spise og snakke med.",
+    "example": "Jeg åpner munnen når jeg synger.",
+    "image": "👄",
+    "clueLetters": [
+      "M",
+      "U",
+      "N",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-hår",
+    "word": "HÅR",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Hår vokser på hodet og andre steder på kroppen.",
+    "example": "Jeg børster håret mitt.",
+    "image": "🧑",
+    "clueLetters": [
+      "H",
+      "Å",
+      "R",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-fot",
+    "word": "FOT",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En fot er den delen av kroppen vi står på.",
+    "example": "Jeg tar en sokk på foten.",
+    "image": "🦶",
+    "clueLetters": [
+      "F",
+      "O",
+      "T",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-hode",
+    "word": "HODE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Hodet er den delen av kroppen der hjernen, øynene og munnen er.",
+    "example": "Jeg har en lue på hodet.",
+    "image": "🧒",
+    "clueLetters": [
+      "H",
+      "O",
+      "D",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-hånd",
+    "word": "HÅND",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "irregular-spelling"
+    ],
+    "definition": "En hånd har fingre som vi kan gripe ting med.",
+    "example": "Jeg vinker med hånden.",
+    "image": "✋",
+    "clueLetters": [
+      "H",
+      "Å",
+      "N",
+      "D",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T"
+    ]
+  },
+  {
+    "id": "nb-bein",
+    "word": "BEIN",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Et bein er en del av kroppen vi bruker til å gå med.",
+    "example": "Jeg står på ett bein.",
+    "image": "🦵",
+    "clueLetters": [
+      "B",
+      "E",
+      "I",
+      "N",
+      "S",
+      "A",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-tann",
+    "word": "TANN",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En tann er en hard del i munnen som hjelper oss å tygge.",
+    "example": "Jeg pusser hver tann.",
+    "image": "🦷",
+    "clueLetters": [
+      "T",
+      "A",
+      "N",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-øre",
+    "word": "ØRE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Et øre hjelper oss å høre lyder.",
+    "example": "Jeg hører musikk med ørene.",
+    "image": "👂",
+    "clueLetters": [
+      "Ø",
+      "R",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-mage",
+    "word": "MAGE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "kropp"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Magen er den delen av kroppen mellom brystet og hoftene.",
+    "example": "Magen min rumler når jeg er sulten.",
+    "image": "🧒",
+    "clueLetters": [
+      "M",
+      "A",
+      "G",
+      "E",
+      "S",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-vind",
+    "word": "VIND",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "vaer"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "Vind er luft som beveger seg.",
+    "example": "Vinden får flagget til å vaie.",
+    "image": "🌬️",
+    "clueLetters": [
+      "V",
+      "I",
+      "N",
+      "D",
+      "S",
+      "A",
+      "E",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-sky",
+    "word": "SKY",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "vaer"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En sky er små vanndråper eller iskrystaller oppe i lufta.",
+    "example": "En hvit sky driver over huset.",
+    "image": "☁️",
+    "clueLetters": [
+      "S",
+      "K",
+      "Y",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-lyn",
+    "word": "LYN",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "vaer"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "irregular-spelling"
+    ],
+    "definition": "Lyn er et kraftig lysglimt på himmelen når det er tordenvær.",
+    "example": "Vi ser lyn gjennom vinduet.",
+    "image": "⚡",
+    "clueLetters": [
+      "L",
+      "Y",
+      "N",
+      "S",
+      "A",
+      "E",
+      "I",
+      "O",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-tåke",
+    "word": "TÅKE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "vaer"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Tåke er små vanndråper i lufta som gjør det vanskelig å se langt.",
+    "example": "Fjellet gjemmer seg i tåke.",
+    "image": "🌫️",
+    "clueLetters": [
+      "T",
+      "Å",
+      "K",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-storm",
+    "word": "STORM",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "vaer"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En storm er svært sterk vind.",
+    "example": "Vi holder oss inne når det er storm.",
+    "image": "🌬️",
+    "clueLetters": [
+      "S",
+      "T",
+      "O",
+      "R",
+      "M",
+      "A",
+      "E",
+      "I",
+      "L",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-elg",
+    "word": "ELG",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En elg er et stort dyr med lange bein som lever i skogen.",
+    "example": "Elgen spiser blader fra et tre.",
+    "image": "🫎",
+    "clueLetters": [
+      "E",
+      "L",
+      "G",
+      "S",
+      "A",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-hare",
+    "word": "HARE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En hare er et dyr med lange ører og sterke bakbein.",
+    "example": "Haren hopper mellom trærne.",
+    "image": "🐇",
+    "clueLetters": [
+      "H",
+      "A",
+      "R",
+      "E",
+      "S",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-maur",
+    "word": "MAUR",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En maur er et lite insekt som ofte bor sammen med mange andre maur.",
+    "example": "En maur bærer en liten kvist.",
+    "image": "🐜",
+    "clueLetters": [
+      "M",
+      "A",
+      "U",
+      "R",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-bær",
+    "word": "BÆR",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Bær er små, saftige frukter som kan vokse i skogen.",
+    "example": "Vi plukker blå bær på tur.",
+    "image": "🫐",
+    "clueLetters": [
+      "B",
+      "Æ",
+      "R",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-mose",
+    "word": "MOSE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "Mose er små grønne planter som ofte vokser tett sammen.",
+    "example": "Myk mose vokser på steinen.",
+    "image": "🌿",
+    "clueLetters": [
+      "M",
+      "O",
+      "S",
+      "E",
+      "A",
+      "I",
+      "L",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-sopp",
+    "word": "SOPP",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En sopp kan ha en hatt og en stilk og vokse i skogen.",
+    "example": "Vi ser en sopp ved stien.",
+    "image": "🍄",
+    "clueLetters": [
+      "S",
+      "O",
+      "P",
+      "A",
+      "E",
+      "I",
+      "L",
+      "R",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-ekorn",
+    "word": "EKORN",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "skog"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "Et ekorn er et lite dyr med buskete hale som klatrer i trær.",
+    "example": "Ekornet finner en nøtt.",
+    "image": "🐿️",
+    "clueLetters": [
+      "E",
+      "K",
+      "O",
+      "R",
+      "N",
+      "S",
+      "A",
+      "I",
+      "L",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-geit",
+    "word": "GEIT",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "gard"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En geit er et dyr som ofte har horn og skjegg.",
+    "example": "Geita klatrer på en stein.",
+    "image": "🐐",
+    "clueLetters": [
+      "G",
+      "E",
+      "I",
+      "T",
+      "S",
+      "A",
+      "L",
+      "O",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-høne",
+    "word": "HØNE",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "gard"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En høne er en fugl som kan legge egg.",
+    "example": "Høna går på tunet.",
+    "image": "🐔",
+    "clueLetters": [
+      "H",
+      "Ø",
+      "N",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-gris",
+    "word": "GRIS",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "gard"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En gris er et dyr med tryne som kan bo på en gård.",
+    "example": "Grisen roter i jorda med trynet.",
+    "image": "🐖",
+    "clueLetters": [
+      "G",
+      "R",
+      "I",
+      "S",
+      "A",
+      "E",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-and",
+    "word": "AND",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "gard"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En and er en fugl med bredt nebb og svømmeføtter.",
+    "example": "Anda svømmer i dammen på gården.",
+    "image": "🦆",
+    "clueLetters": [
+      "A",
+      "N",
+      "D",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-høy",
+    "word": "HØY",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "gard"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "irregular-spelling"
+    ],
+    "definition": "Høy er tørket gress som dyr kan spise.",
+    "example": "Bonden gir hesten høy.",
+    "image": "🌾",
+    "clueLetters": [
+      "H",
+      "Ø",
+      "Y",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T"
+    ]
+  },
+  {
+    "id": "nb-buss",
+    "word": "BUSS",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "byen"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En buss er et stort kjøretøy som mange kan reise med.",
+    "example": "Vi tar bussen til byen.",
+    "image": "🚌",
+    "clueLetters": [
+      "B",
+      "U",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "N",
+      "T"
+    ]
+  },
+  {
+    "id": "nb-tog",
+    "word": "TOG",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "byen"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "Et tog har vogner og kjører på skinner.",
+    "example": "Toget stopper på stasjonen.",
+    "image": "🚆",
+    "clueLetters": [
+      "T",
+      "O",
+      "G",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "R",
+      "N",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-bro",
+    "word": "BRO",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "byen"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En bro er en vei over vann eller noe annet vi vil komme over.",
+    "example": "Vi går over en bro.",
+    "image": "🌉",
+    "clueLetters": [
+      "B",
+      "R",
+      "O",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-park",
+    "word": "PARK",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "byen"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "consonant-cluster"
+    ],
+    "definition": "En park er et grønt område der vi kan gå og leke.",
+    "example": "Vi leker i parken.",
+    "image": "🏞️",
+    "clueLetters": [
+      "P",
+      "A",
+      "R",
+      "K",
+      "S",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-butikk",
+    "word": "BUTIKK",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "byen"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "double-consonant",
+      "multi-syllable"
+    ],
+    "definition": "En butikk er et sted der vi kan kjøpe ting.",
+    "example": "Vi kjøper melk i butikken.",
+    "image": "🏪",
+    "clueLetters": [
+      "B",
+      "U",
+      "T",
+      "I",
+      "K",
+      "S",
+      "A",
+      "E",
+      "L",
+      "O",
+      "R",
+      "N"
+    ]
+  },
+  {
+    "id": "nb-melon",
+    "word": "MELON",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "natur"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En melon er en stor frukt med saftig fruktkjøtt.",
+    "example": "Vi deler en melon.",
+    "image": "🍈",
+    "clueLetters": [
+      "M",
+      "E",
+      "L",
+      "O",
+      "N",
+      "S",
+      "A",
+      "I",
+      "R",
+      "T",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-sitron",
+    "word": "SITRON",
+    "language": "nb",
+    "difficulty": 4,
+    "ageBand": "middle",
+    "categories": [
+      "natur"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "En sitron er en gul frukt som smaker surt.",
+    "example": "Jeg har litt sitron i vannet.",
+    "image": "🍋",
+    "clueLetters": [
+      "S",
+      "I",
+      "T",
+      "R",
+      "O",
+      "N",
+      "A",
+      "E",
+      "L",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-drue",
+    "word": "DRUE",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "natur"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "consonant-cluster",
+      "multi-syllable"
+    ],
+    "definition": "En drue er en liten frukt som vokser i klaser.",
+    "example": "Jeg spiser en grønn drue.",
+    "image": "🍇",
+    "clueLetters": [
+      "D",
+      "R",
+      "U",
+      "E",
+      "S",
+      "A",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-løk",
+    "word": "LØK",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "natur"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En løk er en grønnsak med mange lag.",
+    "example": "Vi skjærer løk til suppa.",
+    "image": "🧅",
+    "clueLetters": [
+      "L",
+      "Ø",
+      "K",
+      "S",
+      "A",
+      "E",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "U"
+    ]
+  },
+  {
+    "id": "nb-nøtt",
+    "word": "NØTT",
+    "language": "nb",
+    "difficulty": 3,
+    "ageBand": "middle",
+    "categories": [
+      "natur"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [
+      "double-consonant"
+    ],
+    "definition": "En nøtt har et hardt skall rundt en kjerne.",
+    "example": "Ekornet gjemmer en nøtt.",
+    "image": "🌰",
+    "clueLetters": [
+      "N",
+      "Ø",
+      "T",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "R",
+      "U",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-lue",
+    "word": "LUE",
+    "language": "nb",
+    "difficulty": 1,
+    "ageBand": "early",
+    "categories": [
+      "hjem"
+    ],
+    "syllables": 2,
+    "spellingFeatures": [
+      "multi-syllable"
+    ],
+    "definition": "En lue er noe vi har på hodet for å holde det varmt.",
+    "example": "Jeg tar på meg en varm lue.",
+    "image": "🧢",
+    "clueLetters": [
+      "L",
+      "U",
+      "E",
+      "S",
+      "A",
+      "I",
+      "O",
+      "R",
+      "N",
+      "T",
+      "B"
+    ]
+  },
+  {
+    "id": "nb-dør",
+    "word": "DØR",
+    "language": "nb",
+    "difficulty": 2,
+    "ageBand": "early",
+    "categories": [
+      "hjem"
+    ],
+    "syllables": 1,
+    "spellingFeatures": [],
+    "definition": "En dør er noe vi åpner for å gå inn eller ut.",
+    "example": "Jeg åpner døra til huset.",
+    "image": "🚪",
+    "clueLetters": [
+      "D",
+      "Ø",
+      "R",
+      "S",
+      "A",
+      "E",
+      "I",
+      "L",
+      "O",
+      "N",
+      "T",
+      "U"
+    ]
   }
 ]

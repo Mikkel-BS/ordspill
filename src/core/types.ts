@@ -12,4 +12,8 @@ export interface PuzzleResult { wordId: string; guesses: number; hints: HintKind
 export interface LocalProfile {
   id: string; nickname: string; avatar: number; currentLevel: number;
   discoveredWords: string[]; puzzleHistory: PuzzleResult[]; activePuzzle?: Puzzle;
+  /** Missing on older profiles; 'all' means no theme filter. */
+  selectedTheme?: string;
+  /** Optional practice group; absent means follow normal progression. */
+  selectedLevel?: number;
 }

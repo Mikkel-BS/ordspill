@@ -1,5 +1,6 @@
 import type { LocalProfile } from './types';
 import { getWord } from './wordRepository';
+import { isThemeSelection } from './themes';
 const KEY = 'ordreise:profiles:v1';
 const hints = ['picture', 'first-letter', 'remove-letters', 'syllables', 'reveal-letter'];
 function isProfile(value: unknown): value is LocalProfile {
@@ -12,7 +13,18 @@ function isProfile(value: unknown): value is LocalProfile {
     (!p.activePuzzle || (!!getWord(p.activePuzzle.wordId) && Array.isArray(p.activePuzzle.guesses) && p.activePuzzle.guesses.every(g => typeof g === 'string' && /^[A-ZÆØÅ]+$/u.test(g) && g.length === getWord(p.activePuzzle!.wordId)!.word.length) && Array.isArray(p.activePuzzle.hints) && p.activePuzzle.hints.every(h => hints.includes(h)) && p.activePuzzle.solved === false));
 }
 export function loadProfiles(storage?: Pick<Storage, 'getItem'>): LocalProfile[] {
-  try { const data: unknown = JSON.parse((storage ?? globalThis.localStorage).getItem(KEY) ?? '[]'); return Array.isArray(data) ? data.filter(isProfile) : []; } catch { return []; }
+  try {
+    const data: unknown = JSON.parse((storage ?? globalThis.localStorage).getItem(KEY) ?? '[]');
+    return Array.isArray(data) ? data.filter(isProfile).map(p => {
+      const validTheme = p.selectedTheme === undefined || isThemeSelection(p.selectedTheme);
+      const validLevel = p.selectedLevel === undefined || (Number.isInteger(p.selectedLevel) && p.selectedLevel >= 1 && p.selectedLevel <= p.currentLevel);
+      if (validTheme && validLevel) return p;
+      const restored = { ...p };
+      if (!validTheme) delete restored.selectedTheme;
+      if (!validLevel) delete restored.selectedLevel;
+      return restored; // Invalid preferences must not erase a child's progress.
+    }) : [];
+  } catch { return []; }
 }
 export function saveProfiles(profiles: LocalProfile[], storage?: Pick<Storage, 'setItem'>): boolean {
   try { (storage ?? globalThis.localStorage).setItem(KEY, JSON.stringify(profiles)); return true; } catch { return false; }

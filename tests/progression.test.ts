@@ -1,20 +1,22 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { completePuzzle, generatePuzzleWord } from '../src/core/progressionEngine';
+import { completePuzzle, generatePuzzleWord, themeChoices } from '../src/core/progressionEngine';
+import { getWordTheme } from '../src/core/themes';
 import { loadProfiles, saveProfiles } from '../src/core/profiles';
 import { createPuzzle } from '../src/core/gameEngine';
 import { words, validGuesses } from '../src/core/wordRepository';
 import type { LocalProfile } from '../src/core/types';
 const profile: LocalProfile = {id:'child',nickname:'Ada',avatar:0,currentLevel:1,discoveredWords:[],puzzleHistory:[]};
 describe('word repository', () => {
-  it('has 56 complete unique child-friendly answers and a larger separate guess set', () => {
-    assert.equal(words.length,56); assert.equal(new Set(words.map(w => w.id)).size,56);
+  it('has 120 complete unique child-friendly answers and a larger separate guess set', () => {
+    assert.equal(words.length,120); assert.equal(new Set(words.map(w => w.id)).size,120);
+    assert.equal(new Set(words.map(w => w.word)).size,120);
     assert.ok(validGuesses.nb.size > words.length * 8);
     for (const w of words) {
       assert.ok(validGuesses[w.language].has(w.word)); assert.ok(w.word.length >= 3 && w.word.length <= 6);
       assert.ok(w.image && w.example && w.definition); assert.ok(w.syllables > 0);
     }
-    for (let level=1;level<=4;level++) assert.equal(words.filter(w => w.difficulty === level).length,14);
+    for (let level=1;level<=4;level++) assert.ok(words.filter(w => w.difficulty === level).length >= 20);
     assert.ok(words.some(w => w.difficulty > 1 && w.word.length === 3));
   });
 });
@@ -37,6 +39,33 @@ describe('progression', () => {
     assert.equal(generatePuzzleWord(words,{...profile,discoveredWords:words.map(w => w.id)},4).difficulty,4);
   });
   it('does not record an unfinished puzzle', () => assert.equal(completePuzzle(profile,createPuzzle(words[0])),profile));
+  it('offers meaningful theme pools and locks themes without suitable early words', () => {
+    const early = themeChoices(words,1);
+    assert.equal(early.length,10);
+    for (const choice of early) assert.ok(choice.count >= 7,choice.id);
+    assert.equal(early.find(t => t.id === 'hav')!.available,true);
+    assert.equal(early.find(t => t.id === 'rom')!.available,false);
+    assert.equal(early.find(t => t.id === 'rom')!.minimumLevel,2);
+    assert.ok(themeChoices(words,4).every(t => t.available));
+  });
+  it('keeps every generated themed puzzle within the theme and at or below the requested level', () => {
+    for (let level=1;level<=4;level++) for (const choice of themeChoices(words,level).filter(t => t.available)) {
+      const result = generatePuzzleWord(words,{...profile,selectedTheme:choice.id},level);
+      assert.equal(getWordTheme(result).id,choice.id);
+      assert.ok(result.difficulty <= level);
+    }
+    assert.throws(() => generatePuzzleWord(words,{...profile,selectedTheme:'rom'},1),/No words/);
+    assert.equal(generatePuzzleWord(words,{...profile,selectedTheme:'future'},1).word,'SOL');
+  });
+  it('uses easier unseen words in a theme before replaying and never borrows from another theme', () => {
+    const sea = {...profile,selectedTheme:'hav',discoveredWords:words.filter(w => getWordTheme(w).id === 'hav' && w.difficulty === 4).map(w => w.id)};
+    const next = generatePuzzleWord(words,sea,4);
+    assert.equal(getWordTheme(next).id,'hav'); assert.equal(next.difficulty,3);
+    const allSea = {...sea,discoveredWords:words.filter(w => getWordTheme(w).id === 'hav').map(w => w.id)};
+    const repeat = generatePuzzleWord(words,allSea,4);
+    assert.equal(getWordTheme(repeat).id,'hav'); assert.equal(repeat.difficulty,4);
+    assert.deepEqual(sea.puzzleHistory,[]);
+  });
 });
 describe('local profiles', () => {
   it('round trips isolated player progress and resumable hints', () => {
@@ -50,5 +79,12 @@ describe('local profiles', () => {
     assert.deepEqual(loadProfiles({getItem:()=>JSON.stringify([{...profile,activePuzzle:{wordId:'missing',guesses:[],hints:[],solved:false}}])}),[]);
     assert.deepEqual(loadProfiles({getItem:()=>{throw Error();}}),[]);
     assert.equal(saveProfiles([profile],{setItem:()=>{throw Error();}}),false);
+  });
+  it('persists isolated theme and practice preferences while keeping legacy profiles intact', () => {
+    const ada = {...profile,selectedTheme:'hav',selectedLevel:1};
+    const ben = {...profile,id:'ben',nickname:'Ben'};
+    assert.deepEqual(loadProfiles({getItem:()=>JSON.stringify([ada,ben])}),[ada,ben]);
+    assert.deepEqual(loadProfiles({getItem:()=>JSON.stringify([{...profile,selectedTheme:'unknown',selectedLevel:99}])}),[profile]);
+    assert.equal(completePuzzle(ada,{...createPuzzle(words[0]),solved:true,guesses:['SOL']}).selectedTheme,'hav');
   });
 });

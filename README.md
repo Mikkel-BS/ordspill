@@ -30,7 +30,7 @@ GitHub Actions runs unit tests, the production build and Playwright checks. Play
 
 ## MVP
 
-- 56 manually selected Bokmål answers; 14 in each of four difficulty groups.
+- 120 manually selected Bokmål answers across four difficulty groups (21 / 44 / 33 / 22). Each has a meaning, example sentence, picture and syllable count.
 - 38,269 valid Bokmål guesses and inflected forms imported from Norsk ordbank (2022-02-01 snapshot, CC BY 4.0). It is **not an exhaustive or continuously updated Norwegian dictionary**: the interface explains when a word is missing without saying the child's word is wrong.
 - Three to six letters, including Æ, Ø and Å. Words are normalized to uppercase NFC.
 - A visible meaning-based theme clue above every board, also shown on discovery and in the word collection. Themes are independent of difficulty.
@@ -53,7 +53,7 @@ The MVP uses system pictograms plus local SVG artwork, not downloaded images. So
 src/core/
   types.ts              Word, language, profile, puzzle and history contracts
   gameEngine.ts         Pure validation, two-pass evaluation, hints and keyboard feedback
-  themes.ts             Theme metadata, semantic clues and safe category fallback
+  themes.ts             Theme metadata, semantic clues and safe category fallback and theme membership
   wordRepository.ts     Language-specific answer/guess repositories and group descriptions
   progressionEngine.ts  Pure puzzle selection, completion and simple unlock policy
   profiles.ts           Local persistence, schema guards and storage failure handling
@@ -70,7 +70,7 @@ public/
 
 The core engine imports no React or browser APIs. Puzzle selection and completion are separate from evaluation. The data model supports `nb` and `nn`; Nynorsk needs its own reviewed answers, guesses and UI language choice before enabling it. Images and audio are optional fields and can later reference bundled assets.
 
-History preserves guesses, exact hint kinds, completion time and whether each solve was independent. This supports later slow adaptation without changing letter evaluation. The current unlock policy deliberately uses unique discoveries rather than a complex performance score. It does not automatically make the game harder based on speed or punish help. Ordered categories now supply a broad theme clue through `src/core/themes.ts`. Farm animals/materials, body parts and weather have specific categories so each clue fits the word. The theme is a standard scaffold, not a requested hint; all valid guesses of the right length remain accepted. Theme selection and a full theme map, achievements and advanced adaptation remain outside this MVP.
+History preserves guesses, exact hint kinds, completion time and whether each solve was independent. This supports later slow adaptation without changing letter evaluation. The current unlock policy deliberately uses unique discoveries rather than a complex performance score. It does not automatically make the game harder based on speed or punish help. Ordered categories now supply a broad theme clue through `src/core/themes.ts`. Farm animals/materials, body parts and weather have specific categories so each clue fits the word. The theme is a standard scaffold, not a requested hint; all valid guesses of the right length remain accepted. The per-player theme selector defaults to “Overrask meg”. Ten themes contain 7–19 curated words each. Generation prefers unseen answers at the chosen level, then easier unseen words in the same theme; it never substitutes a harder answer. Themes without an eligible word are disabled with their first available group. A fresh board can switch immediately; typed letters, guesses and hints preserve the active puzzle, with the preference applied to the next puzzle. Choosing a practice group persists independently of theme; “Følg min vei videre” returns to automatic progression. Choosing a lower group without words in the selected theme explicitly returns to all themes. Old profiles without preferences continue to load; unknown preferences are discarded without losing progress. A full theme map, achievements and advanced adaptation remain outside this MVP.
 
 ## Offline and privacy
 
@@ -96,7 +96,7 @@ After publishing, the workflow runs desktop/mobile browser checks against the li
 
 `src/data/validGuesses.json` contains 38,269 forms from **Norsk ordbank – bokmål 2005**, created by Universitetet i Bergen and Språkrådet and provided by Språkbanken at Nasjonalbiblioteket, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: [Språkbanken resource catalogue](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-5/), snapshot 2022-02-01. The imported archive SHA-256 and modification notice are stored in `_source`. Attribution and links are also available in the app under “Til voksne”.
 
-Only `normert` full forms active on 2026-10-05 are imported, with lowercase spelling, 3–6 letters and the supported A–Z/Æ/Ø/Å alphabet. Proper names, abbreviations written with capitals, historical/unofficial forms, punctuation and unsupported accented letters are excluded. Forms are converted to uppercase NFC, deduplicated and combined with the 56 curated answers. The fullform list includes uncommon but normatively possible inflections; accepting a guess does not make it a puzzle answer. The 56 child-friendly answer words are unchanged.
+Only `normert` full forms active on 2026-10-05 are imported, with lowercase spelling, 3–6 letters and the supported A–Z/Æ/Ø/Å alphabet. Proper names, abbreviations written with capitals, historical/unofficial forms, punctuation and unsupported accented letters are excluded. Forms are converted to uppercase NFC, deduplicated and combined with the curated answers. The fullform list includes uncommon but normatively possible inflections; accepting a guess does not make it a puzzle answer. All 120 curated answers are already represented in the imported guess list; expanding the answer set does not broaden or replace the guess dictionary.
 
 To reproduce the import, download the pinned archive linked in `_source.downloadUrl`, then run (Python 3):
 
