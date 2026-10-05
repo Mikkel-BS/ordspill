@@ -6,3 +6,5 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 button{touch-action:manipulation}
+/* Keep long Norwegian keyboard rows inside the mobile grid column. */
+.main-column{min-width:0}.keyboard-row{min-width:0}.key{flex:1 1 0;max-width:45px;padding:0}

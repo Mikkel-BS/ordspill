@@ -49,6 +49,7 @@ test('full Norwegian keyboard supports Æ Ø Å and symbol feedback', async ({ p
   await page.goto('/');
   await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1',JSON.stringify([{id:'test',nickname:'Ola',avatar:0,currentLevel:2,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:'nb-båt',guesses:[],hints:[],solved:false}}])));
   await page.reload(); await page.getByRole('button',{name:/Ola.*0 ord funnet/}).click();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   for (const letter of ['Æ','Ø','Å']) await expect(page.getByRole('button',{name:letter,exact:true})).toBeEnabled();
   await enterWord(page,'BIL'); await expect(page.getByLabel('B: Riktig plass',{exact:true})).toContainText('✓');
   await enterWord(page,'BÅT'); await expect(page.getByRole('heading',{name:'Du fant båt!'})).toBeVisible();
@@ -63,7 +64,6 @@ test('works offline after the app shell is installed', async ({ page, context })
   page.on('pageerror', error => console.log('OFFLINE PAGE ERROR', error.message));
   page.on('console', msg => { if (msg.type() === 'error') console.log('OFFLINE CONSOLE', msg.text()); });
   await context.setOffline(true); await page.reload();
-  console.log('OFFLINE BODY', await page.locator('body').innerText());
   await page.getByRole('button',{name:/Iben.*0 ord funnet/}).click();
   await enterWord(page,'SOL'); await expect(page.getByRole('heading',{name:'Du fant sol!'})).toBeVisible();
   await expect(page.getByText('Sola skinner på huset.')).toBeVisible();
