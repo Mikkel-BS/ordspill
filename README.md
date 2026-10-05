@@ -1,5 +1,7 @@
 # Ordreise
 
+Play: **https://mikkel-bs.github.io/ordspill/**
+
 A calm Norwegian reading and vocabulary game for children around 6–9. Children follow letter clues to discover a word, then connect it with a picture, meaning and example sentence. The interface is in Bokmål.
 
 ## Run locally
@@ -81,3 +83,9 @@ Browser storage clearing, private browsing, switching browsers or changing the h
 Unit tests include 729 exhaustive repeated-letter cases over a small Norwegian-letter alphabet, surplus duplicates, normalization, dictionary validation, more than six attempts, immutable hints, keyboard feedback, independent/hinted solving, unique-word unlocking, replay selection, profile isolation and corrupted/unavailable storage.
 
 Before extending the word lists, review Bokmål spelling, child familiarity, syllables, examples and picture suitability with an educator. A full dictionary import should include its licensing and provenance rather than silently treating generated letter combinations as words.
+
+## GitHub Pages deployment
+
+The `Deploy GitHub Pages` workflow builds and publishes `dist/` after each push to `main`, or when manually run from Actions. Repository Settings → Pages must use **GitHub Actions** as its source. Deployment uses the protected `github-pages` environment with Pages-write and OIDC permissions. The existing relative Vite asset paths and service-worker scope support `/ordspill/` without a separate hosting build.
+
+After publishing, the workflow runs all eight desktop/mobile browser checks against the live Pages URL, including offline reload and continued play. The tests use isolated browser profiles and do not modify any real player progress. The published URL is also shown in the deployment environment.

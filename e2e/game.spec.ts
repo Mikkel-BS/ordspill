@@ -11,7 +11,7 @@ async function enterWord(page: Page, word: string) {
 }
 test('solve, discover meaning, collect, and isolate children', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
-  await page.goto('/'); await createPlayer(page, 'Ada');
+  await page.goto('./'); await createPlayer(page, 'Ada');
   await enterWord(page, 'BIL');
   await expect(page.getByRole('log')).toContainText('B');
   await page.getByRole('button', { name: 'Se et bilde' }).click();
@@ -37,7 +37,7 @@ test('solve, discover meaning, collect, and isolate children', async ({ page }) 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 test('resumes hints and removes impossible letters without losing answer letters', async ({ page }) => {
-  await page.goto('/'); await createPlayer(page,'Mia');
+  await page.goto('./'); await createPlayer(page,'Mia');
   await page.getByRole('button',{ name:'Færre bokstaver' }).click();
   await expect(page.getByText('Nå vises bare bokstaver som er med i ordet.')).toBeVisible();
   await expect(page.getByRole('button',{ name:'A',exact:true })).toHaveCount(0);
@@ -46,7 +46,7 @@ test('resumes hints and removes impossible letters without losing answer letters
   await enterWord(page,'SOL'); await expect(page.getByRole('heading',{ name:'Du fant sol!' })).toBeVisible();
 });
 test('full Norwegian keyboard supports Æ Ø Å and symbol feedback', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('./');
   await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1',JSON.stringify([{id:'test',nickname:'Ola',avatar:0,currentLevel:2,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:'nb-båt',guesses:[],hints:[],solved:false}}])));
   await page.reload(); await page.getByRole('button',{name:/Ola.*0 ord funnet/}).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -55,7 +55,7 @@ test('full Norwegian keyboard supports Æ Ø Å and symbol feedback', async ({ p
   await enterWord(page,'BÅT'); await expect(page.getByRole('heading',{name:'Du fant båt!'})).toBeVisible();
 });
 test('works offline after the app shell is installed', async ({ page, context }) => {
-  await page.goto('/'); await createPlayer(page,'Iben');
+  await page.goto('./'); await createPlayer(page,'Iben');
   await page.getByRole('button',{name:'Se et bilde'}).click();
   await page.evaluate(async () => { await navigator.serviceWorker.ready; if (!navigator.serviceWorker.controller) await new Promise<void>(resolve => navigator.serviceWorker.addEventListener('controllerchange',()=>resolve(),{once:true})); });
   const keys = await page.evaluate(async () => { const cache = await caches.open('ordreise-v1'); return (await cache.keys()).map(r => r.url); });
