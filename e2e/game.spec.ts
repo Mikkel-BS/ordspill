@@ -75,3 +75,13 @@ test.afterEach(async ({ page }, testInfo) => {
     console.log('KEY GEOMETRY', await page.locator('.key').evaluateAll(elements => elements.map(e => ({letter:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))).catch(() => []));
   }
 });
+
+test('accepts SNU as a real Norwegian guess', async ({ page }) => {
+  await page.goto('./');
+  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1',JSON.stringify([{id:'snu-test',nickname:'Siri',avatar:0,currentLevel:1,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:'nb-hus',guesses:[],hints:[],solved:false}}])));
+  await page.reload(); await page.getByRole('button',{name:/Siri.*0 ord funnet/}).click();
+  await enterWord(page,'SNU');
+  await expect(page.getByRole('log')).toContainText('S');
+  await expect(page.getByText('Nye spor! Se på bokstavene og prøv igjen.')).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].activePuzzle.guesses)).toEqual(['SNU']);
+});

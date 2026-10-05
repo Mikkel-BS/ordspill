@@ -31,7 +31,7 @@ GitHub Actions runs unit tests, the production build and Playwright checks. Play
 ## MVP
 
 - 56 manually selected Bokmål answers; 14 in each of four difficulty groups.
-- A separate, larger starter vocabulary of valid guesses. It is **not an exhaustive Norwegian dictionary**: the interface explains when a word is missing without saying the child's word is wrong.
+- 38,269 valid Bokmål guesses and inflected forms imported from Norsk ordbank (2022-02-01 snapshot, CC BY 4.0). It is **not an exhaustive or continuously updated Norwegian dictionary**: the interface explains when a word is missing without saying the child's word is wrong.
 - Three to six letters, including Æ, Ø and Å. Words are normalized to uppercase NFC.
 - Familiarity, syllables, consonant clusters, double consonants and spelling features inform curated groups. Difficulty is not calculated from length alone.
 - Limited letter selection in group one; full Norwegian keyboard in later groups. Physical keyboards also work.
@@ -57,7 +57,7 @@ src/core/
   profiles.ts           Local persistence, schema guards and storage failure handling
 src/data/
   answers.json          Curated answers with educational metadata
-  validGuesses.json     Separate nb and nn guess sets (nn initially empty)
+  validGuesses.json     Imported nb forms, source/license metadata; nn initially empty
 src/components/
   Artwork.tsx           Bundled landscape and word-picture rendering
 src/App.tsx             Profile chooser, board, discovery, collection and journey UI
@@ -88,4 +88,19 @@ Before extending the word lists, review Bokmål spelling, child familiarity, syl
 
 The `Deploy GitHub Pages` workflow builds and publishes `dist/` after each push to `main`, or when manually run from Actions. Repository Settings → Pages must use **GitHub Actions** as its source. Deployment uses the protected `github-pages` environment with Pages-write and OIDC permissions. The existing relative Vite asset paths and service-worker scope support `/ordspill/` without a separate hosting build.
 
-After publishing, the workflow runs all eight desktop/mobile browser checks against the live Pages URL, including offline reload and continued play. The tests use isolated browser profiles and do not modify any real player progress. The published URL is also shown in the deployment environment.
+After publishing, the workflow runs all ten desktop/mobile browser checks against the live Pages URL, including offline reload and continued play. The tests use isolated browser profiles and do not modify any real player progress. The published URL is also shown in the deployment environment.
+
+## Guess dictionary source and regeneration
+
+`src/data/validGuesses.json` contains 38,269 forms from **Norsk ordbank – bokmål 2005**, created by Universitetet i Bergen and Språkrådet and provided by Språkbanken at Nasjonalbiblioteket, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: [Språkbanken resource catalogue](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-5/), snapshot 2022-02-01. The imported archive SHA-256 and modification notice are stored in `_source`. Attribution and links are also available in the app under “Til voksne”.
+
+Only `normert` full forms active on 2026-10-05 are imported, with lowercase spelling, 3–6 letters and the supported A–Z/Æ/Ø/Å alphabet. Proper names, abbreviations written with capitals, historical/unofficial forms, punctuation and unsupported accented letters are excluded. Forms are converted to uppercase NFC, deduplicated and combined with the 56 curated answers. The fullform list includes uncommon but normatively possible inflections; accepting a guess does not make it a puzzle answer. The 56 child-friendly answer words are unchanged.
+
+To reproduce the import, download the pinned archive linked in `_source.downloadUrl`, then run (Python 3):
+
+```sh
+python3 scripts/import_wordbank.py path/to/20220201_norsk_ordbank_nob_2005.tar.gz
+python3 -m unittest discover -s tests -p wordbank_test.py
+```
+
+The downloaded source archive stays outside version control. The generated dictionary is bundled with the app and works offline; no dictionary API requests occur during play.
