@@ -23,7 +23,9 @@ self.addEventListener('fetch', event => {
       if (response.ok) await cache.put(event.request, response.clone());
       return response;
     } catch {
-      const cached = await cache.match(event.request);
+      // This static app has no user-specific server responses. Precached modules
+      // can differ only in the Origin request header (Vite serves Vary: Origin).
+      const cached = await cache.match(event.request, { ignoreVary: true });
       if (cached) return cached;
       if (event.request.mode === 'navigate') return (await cache.match(new URL('./index.html', self.registration.scope))) ?? Response.error();
       return Response.error();
