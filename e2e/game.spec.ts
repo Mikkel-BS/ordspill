@@ -65,8 +65,31 @@ test('works offline after the app shell is installed', async ({ page, context })
   page.on('console', msg => { if (msg.type() === 'error') console.log('OFFLINE CONSOLE', msg.text()); });
   await context.setOffline(true); await page.reload();
   await page.getByRole('button',{name:/Iben.*0 ord funnet/}).click();
+  await expect(page.getByRole('complementary', { name: 'Temaspor' })).toContainText('Tema: Vær og himmel');
   await enterWord(page,'SOL'); await expect(page.getByRole('heading',{name:'Du fant sol!'})).toBeVisible();
   await expect(page.getByText('Sola skinner på huset.')).toBeVisible();
+});
+
+test('theme follows the word through play, discovery and collection without counting as a hint', async ({ page }) => {
+  await page.goto('./'); await createPlayer(page, 'Liv');
+  const clue = page.getByRole('complementary', { name: 'Temaspor' });
+  await expect(clue).toContainText('Tema: Vær og himmel');
+  await expect(clue).toContainText('Vi leter etter noe vi kan se ute eller på himmelen.');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await enterWord(page, 'BIL'); // Valid guesses may come from a different theme.
+  await expect(page.getByRole('log')).toContainText('B');
+  await enterWord(page, 'SOL');
+  await expect(page.getByRole('heading', { name: 'Du fant sol!' })).toBeVisible();
+  await expect(page.locator('.discovery .theme-tag')).toHaveText('🌤️ Tema: Vær og himmel');
+  const history = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].puzzleHistory);
+  expect(history[0].independent).toBe(true); expect(history[0].hints).toEqual([]);
+  await page.getByRole('button', { name: 'Neste oppdagelse' }).click();
+  await expect(clue).toContainText('Tema: Byen');
+  await page.reload(); await page.getByRole('button', { name: /Liv.*1 ord funnet/ }).click();
+  await expect(clue).toContainText('Tema: Byen');
+  await page.getByRole('button', { name: 'Min ordbok' }).click();
+  await expect(page.getByRole('button', { name: /SOL/ })).toContainText('Tema: Vær og himmel');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
 test.afterEach(async ({ page }, testInfo) => {

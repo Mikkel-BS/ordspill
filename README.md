@@ -33,6 +33,7 @@ GitHub Actions runs unit tests, the production build and Playwright checks. Play
 - 56 manually selected Bokmål answers; 14 in each of four difficulty groups.
 - 38,269 valid Bokmål guesses and inflected forms imported from Norsk ordbank (2022-02-01 snapshot, CC BY 4.0). It is **not an exhaustive or continuously updated Norwegian dictionary**: the interface explains when a word is missing without saying the child's word is wrong.
 - Three to six letters, including Æ, Ø and Å. Words are normalized to uppercase NFC.
+- A visible meaning-based theme clue above every board, also shown on discovery and in the word collection. Themes are independent of difficulty.
 - Familiarity, syllables, consonant clusters, double consonants and spelling features inform curated groups. Difficulty is not calculated from length alone.
 - Limited letter selection in group one; full Norwegian keyboard in later groups. Physical keyboards also work.
 - Correct two-pass repeated-letter matching. Exact matches consume letters first, then misplaced matches consume the remaining occurrences.
@@ -52,6 +53,7 @@ The MVP uses system pictograms plus local SVG artwork, not downloaded images. So
 src/core/
   types.ts              Word, language, profile, puzzle and history contracts
   gameEngine.ts         Pure validation, two-pass evaluation, hints and keyboard feedback
+  themes.ts             Theme metadata, semantic clues and safe category fallback
   wordRepository.ts     Language-specific answer/guess repositories and group descriptions
   progressionEngine.ts  Pure puzzle selection, completion and simple unlock policy
   profiles.ts           Local persistence, schema guards and storage failure handling
@@ -68,7 +70,7 @@ public/
 
 The core engine imports no React or browser APIs. Puzzle selection and completion are separate from evaluation. The data model supports `nb` and `nn`; Nynorsk needs its own reviewed answers, guesses and UI language choice before enabling it. Images and audio are optional fields and can later reference bundled assets.
 
-History preserves guesses, exact hint kinds, completion time and whether each solve was independent. This supports later slow adaptation without changing letter evaluation. The current unlock policy deliberately uses unique discoveries rather than a complex performance score. It does not automatically make the game harder based on speed or punish help. Theme categories are ready for a future exploration map; a full theme map, achievements and advanced adaptation are outside this MVP.
+History preserves guesses, exact hint kinds, completion time and whether each solve was independent. This supports later slow adaptation without changing letter evaluation. The current unlock policy deliberately uses unique discoveries rather than a complex performance score. It does not automatically make the game harder based on speed or punish help. Ordered categories now supply a broad theme clue through `src/core/themes.ts`. Farm animals/materials, body parts and weather have specific categories so each clue fits the word. The theme is a standard scaffold, not a requested hint; all valid guesses of the right length remain accepted. Theme selection and a full theme map, achievements and advanced adaptation remain outside this MVP.
 
 ## Offline and privacy
 
@@ -88,7 +90,7 @@ Before extending the word lists, review Bokmål spelling, child familiarity, syl
 
 The `Deploy GitHub Pages` workflow builds and publishes `dist/` after each push to `main`, or when manually run from Actions. Repository Settings → Pages must use **GitHub Actions** as its source. Deployment uses the protected `github-pages` environment with Pages-write and OIDC permissions. The existing relative Vite asset paths and service-worker scope support `/ordspill/` without a separate hosting build.
 
-After publishing, the workflow runs all ten desktop/mobile browser checks against the live Pages URL, including offline reload and continued play. The tests use isolated browser profiles and do not modify any real player progress. The published URL is also shown in the deployment environment.
+After publishing, the workflow runs desktop/mobile browser checks against the live Pages URL, including offline reload and continued play. The tests use isolated browser profiles and do not modify any real player progress. The published URL is also shown in the deployment environment.
 
 ## Guess dictionary source and regeneration
 
