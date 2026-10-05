@@ -40,7 +40,7 @@ test('resumes hints and removes impossible letters without losing answer letters
   await page.goto('/'); await createPlayer(page,'Mia');
   await page.getByRole('button',{ name:'Færre bokstaver' }).click();
   await expect(page.getByText('Nå vises bare bokstaver som er med i ordet.')).toBeVisible();
-  await expect(page.getByRole('button',{ name:'A',exact:true })).toBeDisabled();
+  await expect(page.getByRole('button',{ name:'A',exact:true })).toHaveCount(0);
   await page.reload(); await page.getByRole('button',{ name:/Mia.*0 ord funnet/ }).click();
   await expect(page.getByText('Nå vises bare bokstaver som er med i ordet.')).toBeVisible();
   await enterWord(page,'SOL'); await expect(page.getByRole('heading',{ name:'Du fant sol!' })).toBeVisible();
@@ -57,8 +57,21 @@ test('works offline after the app shell is installed', async ({ page, context })
   await page.goto('/'); await createPlayer(page,'Iben');
   await page.getByRole('button',{name:'Se et bilde'}).click();
   await page.evaluate(async () => { await navigator.serviceWorker.ready; if (!navigator.serviceWorker.controller) await new Promise<void>(resolve => navigator.serviceWorker.addEventListener('controllerchange',()=>resolve(),{once:true})); });
+  const keys = await page.evaluate(async () => { const cache = await caches.open('ordreise-v1'); return (await cache.keys()).map(r => r.url); });
+  expect(keys.some(url => url.endsWith('.js'))).toBe(true);
+  expect(keys.some(url => url.endsWith('.css'))).toBe(true);
+  page.on('pageerror', error => console.log('OFFLINE PAGE ERROR', error.message));
+  page.on('console', msg => { if (msg.type() === 'error') console.log('OFFLINE CONSOLE', msg.text()); });
   await context.setOffline(true); await page.reload();
+  console.log('OFFLINE BODY', await page.locator('body').innerText());
   await page.getByRole('button',{name:/Iben.*0 ord funnet/}).click();
   await enterWord(page,'SOL'); await expect(page.getByRole('heading',{name:'Du fant sol!'})).toBeVisible();
   await expect(page.getByText('Sola skinner på huset.')).toBeVisible();
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  if (testInfo.status !== testInfo.expectedStatus) {
+    console.log('FAILURE DOM', await page.locator('body').innerText().catch(() => 'unavailable'));
+    console.log('KEY GEOMETRY', await page.locator('.key').evaluateAll(elements => elements.map(e => ({letter:e.getAttribute('aria-label'),rect:e.getBoundingClientRect().toJSON()}))).catch(() => []));
+  }
 });

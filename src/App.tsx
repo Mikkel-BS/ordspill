@@ -41,7 +41,7 @@ export default function App() {
   const profile = profiles.find(p => p.id === profileId);
   const word = puzzle ? getWord(puzzle.wordId) : undefined;
   useEffect(() => { setStorageIssue(!saveProfiles(profiles)); }, [profiles]);
-  useEffect(() => { bottom.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }, [puzzle?.guesses.length]);
+  useEffect(() => { const board = bottom.current?.parentElement?.parentElement; if (board) board.scrollTop = board.scrollHeight; }, [puzzle?.guesses.length]);
   function updateProfile(updated: LocalProfile) { setProfiles(current => current.map(p => p.id === updated.id ? updated : p)); }
   function start(p: LocalProfile, level = p.currentLevel) {
     const next = createPuzzle(generatePuzzleWord(words, p, level));
