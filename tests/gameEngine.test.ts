@@ -63,3 +63,17 @@ describe('validation and supportive hints', () => {
     assert.equal(keyboardFeedback(bil,{...createPuzzle(bil),guesses:['ILL']}).L,'correct');
   });
 });
+
+describe('full Bokmål guess vocabulary', () => {
+  it('accepts SNU and common inflected words missing from the starter list', () => {
+    for (const guess of ['SNU','SER','FÅR','GIKK','FÅTT','RØRT','LØPE','BØKER','TRÆR','ØKS','ØRN','ÅRE','ÆRE']) {
+      const target = { ...sol, word: 'X'.repeat(guess.length) };
+      assert.equal(validateGuess(guess,target,validGuesses.nb),null,guess);
+    }
+  });
+  it('keeps the larger dictionary bounded to supported Norwegian 3–6-letter forms', () => {
+    assert.ok(validGuesses.nb.size > 30000);
+    for (const guess of validGuesses.nb) assert.match(guess,/^[A-ZÆØÅ]{3,6}$/u);
+    for (const guess of ['ZZZ','XYZXYZ','KAFÉ','BIL-EN']) assert.equal(validGuesses.nb.has(guess),false);
+  });
+});

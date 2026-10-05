@@ -5,3 +5,4 @@ test-results/
 *.local
 .tmp/
 *.tsbuildinfo
+__pycache__/
