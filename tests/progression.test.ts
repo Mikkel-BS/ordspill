@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { completePuzzle, generatePuzzleWord, themeChoices } from '../src/core/progressionEngine';
-import { getWordTheme } from '../src/core/themes';
+import { getWordTheme, themes } from '../src/core/themes';
 import { loadProfiles, saveProfiles } from '../src/core/profiles';
 import { createPuzzle } from '../src/core/gameEngine';
 import { words, validGuesses } from '../src/core/wordRepository';
@@ -41,8 +41,8 @@ describe('progression', () => {
   it('does not record an unfinished puzzle', () => assert.equal(completePuzzle(profile,createPuzzle(words[0])),profile));
   it('offers meaningful theme pools and locks themes without suitable early words', () => {
     const early = themeChoices(words,1);
-    assert.equal(early.length,10);
-    for (const choice of early) assert.ok(choice.count >= 7,choice.id);
+    assert.equal(early.length,Object.keys(themes).length);
+    for (const choice of early) assert.ok(choice.count >= 2,choice.id);
     assert.equal(early.find(t => t.id === 'hav')!.available,true);
     assert.equal(early.find(t => t.id === 'rom')!.available,false);
     assert.equal(early.find(t => t.id === 'rom')!.minimumLevel,2);

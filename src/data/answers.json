@@ -149,8 +149,7 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "gard",
-      "natur"
+      "gard"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -181,11 +180,12 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "gard",
-      "natur"
+      "gard"
     ],
     "syllables": 1,
-    "spellingFeatures": [],
+    "spellingFeatures": [
+      "diphthong"
+    ],
     "definition": "En sau har ull som holder den varm.",
     "example": "Sauen står på jordet.",
     "image": "🐑",
@@ -210,8 +210,7 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "gard",
-      "natur"
+      "gard"
     ],
     "syllables": 1,
     "spellingFeatures": [],
@@ -240,7 +239,7 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "mat"
     ],
     "syllables": 1,
     "spellingFeatures": [],
@@ -329,7 +328,7 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "lek"
     ],
     "syllables": 1,
     "spellingFeatures": [],
@@ -439,7 +438,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Det vokser høyt og har stamme og greiner."
   },
   {
     "id": "nb-sko",
@@ -448,7 +448,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "klar"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -470,7 +470,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du har den på foten når du går ute."
   },
   {
     "id": "nb-båt",
@@ -499,7 +500,8 @@
       "R",
       "N",
       "U"
-    ]
+    ],
+    "clue": "Du kan reise med den på vannet."
   },
   {
     "id": "nb-øye",
@@ -530,7 +532,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du bruker det til å se med."
   },
   {
     "id": "nb-egg",
@@ -539,7 +542,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "gard"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -562,7 +565,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Høna legger dette. Det har et skall rundt."
   },
   {
     "id": "nb-ull",
@@ -571,8 +575,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "gard",
-      "natur"
+      "gard"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -594,7 +597,8 @@
       "N",
       "T",
       "B"
-    ]
+    ],
+    "clue": "Vi får dette fra sauen og kan lage varme klær av det."
   },
   {
     "id": "nb-ost",
@@ -603,7 +607,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "mat"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -624,7 +628,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Vi lager dette av melk og kan ha det på brødskiva."
   },
   {
     "id": "nb-hatt",
@@ -633,7 +638,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "klar"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -656,7 +661,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du kan ha den på hodet. Den har ofte en brem."
   },
   {
     "id": "nb-katt",
@@ -665,7 +671,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "dyr"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -688,7 +694,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Dette dyret mjauer og kan male når det koser seg."
   },
   {
     "id": "nb-fisk",
@@ -719,7 +726,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Dette dyret svømmer og puster med gjeller."
   },
   {
     "id": "nb-ball",
@@ -728,7 +736,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "lek"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -750,7 +758,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En rund ting du kan sparke, kaste eller trille i lek."
   },
   {
     "id": "nb-seng",
@@ -781,7 +790,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Her ligger du når du skal sove."
   },
   {
     "id": "nb-kopp",
@@ -813,7 +823,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du kan drikke av den. Den har ofte en hank."
   },
   {
     "id": "nb-rose",
@@ -843,7 +854,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En blomst som ofte har torner på stilken."
   },
   {
     "id": "nb-hest",
@@ -852,8 +864,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "gard",
-      "natur"
+      "gard"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -916,7 +927,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -948,7 +959,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -979,7 +990,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "hjem"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -1165,7 +1176,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "hjem"
+      "dyr"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -1259,7 +1270,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "fjell"
+      "vaer"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -1290,7 +1301,7 @@
     "difficulty": 4,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -1320,7 +1331,7 @@
     "difficulty": 4,
     "ageBand": "middle",
     "categories": [
-      "skog"
+      "dyr"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -1611,7 +1622,7 @@
     "difficulty": 4,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -1976,7 +1987,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et lite dyr i sjøen med skall og lange følehorn."
   },
   {
     "id": "nb-sand",
@@ -2045,8 +2057,8 @@
     "id": "nb-åre",
     "word": "ÅRE",
     "language": "nb",
-    "difficulty": 2,
-    "ageBand": "early",
+    "difficulty": 3,
+    "ageBand": "middle",
     "categories": [
       "hav"
     ],
@@ -2070,7 +2082,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du bruker den til å ro en båt."
   },
   {
     "id": "nb-tur",
@@ -2128,7 +2141,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En smal vei som du kan gå på ute."
   },
   {
     "id": "nb-vann",
@@ -2159,7 +2173,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du kan drikke det og finne det i en bekk."
   },
   {
     "id": "nb-telt",
@@ -2220,7 +2235,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du bærer den på ryggen og har ting oppi på tur."
   },
   {
     "id": "nb-stein",
@@ -2233,7 +2249,8 @@
     ],
     "syllables": 1,
     "spellingFeatures": [
-      "consonant-cluster"
+      "consonant-cluster",
+      "diphthong"
     ],
     "definition": "En stein er en hard bit av fjell.",
     "example": "Jeg finner en rund stein.",
@@ -2281,7 +2298,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Den øverste delen av et fjell."
   },
   {
     "id": "nb-elv",
@@ -2312,7 +2330,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Vann som renner gjennom landskapet."
   },
   {
     "id": "nb-kart",
@@ -2404,7 +2423,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Det store området utenfor jorda, der planetene er."
   },
   {
     "id": "nb-komet",
@@ -2528,7 +2548,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du bruker den til å lukte med."
   },
   {
     "id": "nb-munn",
@@ -2559,7 +2580,8 @@
       "R",
       "T",
       "B"
-    ]
+    ],
+    "clue": "Du åpner den når du spiser eller synger."
   },
   {
     "id": "nb-hår",
@@ -2648,7 +2670,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Den delen av kroppen der hjernen er."
   },
   {
     "id": "nb-hånd",
@@ -2692,7 +2715,9 @@
       "kropp"
     ],
     "syllables": 1,
-    "spellingFeatures": [],
+    "spellingFeatures": [
+      "diphthong"
+    ],
     "definition": "Et bein er en del av kroppen vi bruker til å gå med.",
     "example": "Jeg står på ett bein.",
     "image": "🦵",
@@ -2708,7 +2733,8 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du bruker det til å gå med og kan stå på ett."
   },
   {
     "id": "nb-tann",
@@ -2738,7 +2764,8 @@
       "R",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En hard del i munnen som hjelper deg å tygge."
   },
   {
     "id": "nb-øre",
@@ -2769,7 +2796,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Du bruker det til å høre lyder."
   },
   {
     "id": "nb-mage",
@@ -2800,7 +2828,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Den delen av kroppen som kan rumle når du er sulten."
   },
   {
     "id": "nb-vind",
@@ -2862,7 +2891,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Den svever på himmelen og kan være hvit eller grå."
   },
   {
     "id": "nb-lyn",
@@ -2893,7 +2923,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et kraftig lysglimt på himmelen når det tordner."
   },
   {
     "id": "nb-tåke",
@@ -2924,7 +2955,8 @@
       "R",
       "N",
       "U"
-    ]
+    ],
+    "clue": "Små vanndråper i lufta som gjør det vanskelig å se langt."
   },
   {
     "id": "nb-storm",
@@ -2986,7 +3018,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et stort dyr i skogen. Hannen har ofte stort gevir."
   },
   {
     "id": "nb-hare",
@@ -3017,7 +3050,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et dyr med lange ører som kan løpe fort. Det lever vilt ute."
   },
   {
     "id": "nb-maur",
@@ -3029,7 +3063,9 @@
       "skog"
     ],
     "syllables": 1,
-    "spellingFeatures": [],
+    "spellingFeatures": [
+      "diphthong"
+    ],
     "definition": "En maur er et lite insekt som ofte bor sammen med mange andre maur.",
     "example": "En maur bærer en liten kvist.",
     "image": "🐜",
@@ -3055,7 +3091,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "skog"
+      "mat"
     ],
     "syllables": 1,
     "spellingFeatures": [],
@@ -3075,14 +3111,15 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Små, saftige frukter. Noen er røde og noen er blå."
   },
   {
     "id": "nb-mose",
     "word": "MOSE",
     "language": "nb",
-    "difficulty": 2,
-    "ageBand": "early",
+    "difficulty": 3,
+    "ageBand": "middle",
     "categories": [
       "skog"
     ],
@@ -3106,7 +3143,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Små grønne planter som kan lage et mykt teppe på steiner."
   },
   {
     "id": "nb-sopp",
@@ -3137,7 +3175,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Den vokser i skogen og kan ha en hatt og en stilk."
   },
   {
     "id": "nb-ekorn",
@@ -3181,7 +3220,9 @@
       "gard"
     ],
     "syllables": 1,
-    "spellingFeatures": [],
+    "spellingFeatures": [
+      "diphthong"
+    ],
     "definition": "En geit er et dyr som ofte har horn og skjegg.",
     "example": "Geita klatrer på en stein.",
     "image": "🐐",
@@ -3229,7 +3270,8 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En fugl på gården som kan legge egg."
   },
   {
     "id": "nb-gris",
@@ -3291,20 +3333,22 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En fugl med bredt nebb og svømmeføtter."
   },
   {
     "id": "nb-høy",
     "word": "HØY",
     "language": "nb",
-    "difficulty": 2,
-    "ageBand": "early",
+    "difficulty": 3,
+    "ageBand": "middle",
     "categories": [
       "gard"
     ],
     "syllables": 1,
     "spellingFeatures": [
-      "irregular-spelling"
+      "irregular-spelling",
+      "diphthong"
     ],
     "definition": "Høy er tørket gress som dyr kan spise.",
     "example": "Bonden gir hesten høy.",
@@ -3322,7 +3366,8 @@
       "R",
       "N",
       "T"
-    ]
+    ],
+    "clue": "Tørket gress som gårdsdyr kan spise."
   },
   {
     "id": "nb-buss",
@@ -3352,7 +3397,8 @@
       "R",
       "N",
       "T"
-    ]
+    ],
+    "clue": "Et stort kjøretøy på veien med plass til mange mennesker."
   },
   {
     "id": "nb-tog",
@@ -3411,7 +3457,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du kan gå over den for å komme over en elv."
   },
   {
     "id": "nb-park",
@@ -3483,7 +3530,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -3514,7 +3561,7 @@
     "difficulty": 4,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -3545,7 +3592,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -3577,7 +3624,7 @@
     "difficulty": 2,
     "ageBand": "early",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 1,
     "spellingFeatures": [],
@@ -3597,7 +3644,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En grønnsak med mange lag som vi kan bruke i suppe."
   },
   {
     "id": "nb-nøtt",
@@ -3606,7 +3654,7 @@
     "difficulty": 3,
     "ageBand": "middle",
     "categories": [
-      "natur"
+      "mat"
     ],
     "syllables": 1,
     "spellingFeatures": [
@@ -3637,7 +3685,7 @@
     "difficulty": 1,
     "ageBand": "early",
     "categories": [
-      "hjem"
+      "klar"
     ],
     "syllables": 2,
     "spellingFeatures": [
@@ -3687,6 +3735,7 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du åpner den når du skal gå inn i et hus."
   }
 ]
