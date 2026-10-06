@@ -7,6 +7,6 @@ export function getWord(id: string): Word | undefined { return words.find(word =
 export const groups = [
   { level: 1, name: 'Små oppdagelser', description: 'Kjente ord og noen få bokstaver', icon: '🌱' },
   { level: 2, name: 'Nye spor', description: 'Få bokstavvalg og tydelige ordspor', icon: '🍃' },
-  { level: 3, name: 'På ordjakt', description: 'Stavelser og bokstaver sammen', icon: '🌳' },
+  { level: 3, name: 'På ordjakt', description: 'Lengre ord med samme gode støtte', icon: '🌳' },
   { level: 4, name: 'Store eventyr', description: 'Lengre ord og nye utfordringer', icon: '🏔️' },
 ];

@@ -148,8 +148,8 @@ test('theme choice preserves started puzzles, follows the next word and stays lo
 
 test('theme and practice difficulty remain separate with explicit fallback to all themes', async ({ page }) => {
   await page.goto('./');
-  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'themes',nickname:'Ida',avatar:0,currentLevel:2,discoveredWords:['nb-sol','nb-bil','nb-hus','nb-rev','nb-mus','nb-kua','nb-sau','nb-lam'],puzzleHistory:[]}])));
-  await page.reload(); await page.getByRole('button', { name: /Ida.*8 ord funnet/ }).click();
+  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'themes',nickname:'Ida',avatar:0,currentLevel:2,discoveredWords:['nb-sol','nb-bil','nb-hus','nb-rev','nb-mus','nb-kua','nb-sau','nb-lam','nb-måne','nb-jord'],puzzleHistory:[]}])));
+  await page.reload(); await page.getByRole('button', { name: /Ida.*10 ord funnet/ }).click();
   const picker = page.getByLabel('Hva vil du utforske?');
   await expect(picker.locator('option[value="rom"]')).toBeEnabled();
   await picker.selectOption('rom');
@@ -168,7 +168,7 @@ test('theme and practice difficulty remain separate with explicit fallback to al
   await enterWord(page, 'SEL');
   await page.getByRole('button', { name: 'Spill dette temaet igjen', exact: true }).click();
   await expect(page.locator('.level-label')).toContainText('Små oppdagelser');
-  await page.reload(); await page.getByRole('button', { name: /Ida.*11 ord funnet/ }).click();
+  await page.reload(); await page.getByRole('button', { name: /Ida.*13 ord funnet/ }).click();
   await expect(picker).toHaveValue('hav');
   await expect(page.locator('.level-label')).toContainText('Små oppdagelser');
   await page.getByRole('button', { name: 'Følg min vei videre' }).click();
@@ -176,15 +176,17 @@ test('theme and practice difficulty remain separate with explicit fallback to al
   await expect(page.getByRole('complementary', { name: 'Temaspor' })).toContainText('Tema: Ved havet');
 });
 
-test('a completed singleton theme offers a different theme and makes replay explicit', async ({ page }) => {
+test('a completed theme offers a different theme and makes replay explicit', async ({ page }) => {
   await page.goto('./');
-  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'rom-repeat',nickname:'Ane',avatar:0,currentLevel:2,discoveredWords:['nb-sol','nb-bil','nb-hus','nb-rev','nb-mus','nb-kua','nb-sau','nb-lam'],puzzleHistory:[],selectedTheme:'rom'}])));
-  await page.reload(); await page.getByRole('button', { name: /Ane.*8 ord funnet/ }).click();
+  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'rom-repeat',nickname:'Ane',avatar:0,currentLevel:2,discoveredWords:['nb-sol','nb-bil','nb-hus','nb-rev','nb-mus','nb-kua','nb-sau','nb-lam','nb-måne','nb-jord'],puzzleHistory:[],selectedTheme:'rom'}])));
+  await page.reload(); await page.getByRole('button', { name: /Ane.*10 ord funnet/ }).click();
   await enterWord(page, 'ROM');
   await expect(page.getByRole('button', { name: 'Neste oppdagelse', exact: true })).toHaveCount(0);
   await expect(page.getByText('Temaet er ferdig på dette nivået.', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Spill dette temaet igjen', exact: true }).click();
-  await enterWord(page, 'ROM');
+  const replayWord = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].activePuzzle.wordId.slice(3).toLocaleUpperCase('nb-NO'));
+  expect(replayWord).not.toBe('ROM');
+  await enterWord(page, replayWord);
   await page.getByRole('button', { name: 'Utforsk et annet tema', exact: true }).click();
   await expect(page.getByLabel('Hva vil du utforske?')).toHaveValue('all');
   const profile = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0]);
@@ -216,4 +218,24 @@ test('level 2 supplies a small keyboard and a useful meaning clue with optional 
   const history = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].puzzleHistory);
   expect(history[0].independent).toBe(true); expect(history[0].hints).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
+test('level 3 keeps meaning and keyboard support for five- and six-letter answers', async ({ page }) => {
+  await page.goto('./');
+  for (const word of ['FROSK','GULROT']) {
+    await page.evaluate(word => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'bridge',nickname:'Noa',avatar:0,currentLevel:3,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:`nb-${word.toLowerCase()}`,guesses:[],hints:[],solved:false}}])),word);
+    await page.reload(); await page.getByRole('button', {name:/Noa.*0 ord funnet/}).click();
+    await expect(page.locator('.level-label')).toContainText('På ordjakt');
+    await expect(page.locator('.key')).toHaveCount(10);
+    await expect(page.getByText(`${word.length} bokstaver`,{exact:true})).toBeVisible();
+    await expect(page.getByRole('button',{name:'Vis alle bokstaver',exact:true})).toBeVisible();
+    await expect(page.getByRole('complementary',{name:'Temaspor'})).toContainText(word === 'FROSK' ? 'Et lite dyr som kan hoppe og ofte lever ved en dam.' : 'En oransje grønnsak som vokser nede i jorda.');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.reload(); await page.getByRole('button', {name:/Noa.*0 ord funnet/}).click();
+    await expect(page.locator('.key')).toHaveCount(10);
+    await enterWord(page,word);
+    await expect(page.getByRole('heading',{name:`Du fant ${word.toLowerCase()}!`})).toBeVisible();
+    const history = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].puzzleHistory);
+    expect(history[0].independent).toBe(true); expect(history[0].hints).toEqual([]);
+  }
 });

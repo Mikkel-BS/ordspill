@@ -29,8 +29,17 @@ describe('gradual reading support', () => {
     assert.equal(loaded.activePuzzle?.fullKeyboard,undefined);
     assert.deepEqual(loaded.activePuzzle?.guesses,['OST']);
   });
-  it('uses the full keyboard at later levels and postpones less familiar or ambiguous short words', () => {
-    for (const word of words.filter(w => w.difficulty >= 3)) assert.equal(availableLetters(word,createPuzzle(word)).length,29);
-    for (const word of ['HØY','ÅRE','MOSE']) assert.equal(words.find(w => w.word === word)!.difficulty,3);
+  it('keeps level 2 support for longer level 3 words and opens the full keyboard only at level 4', () => {
+    for (const word of words.filter(w => w.difficulty === 3)) {
+      assert.ok(word.word.length >= 5 && word.word.length <= 6,word.word);
+      assert.ok(word.clue,word.word);
+      const puzzle = createPuzzle(word);
+      assert.equal(availableLetters(word,puzzle).length,10,word.word);
+      for (const letter of word.word) assert.ok(availableLetters(word,puzzle).includes(letter),word.word);
+      assert.equal(usesFullKeyboard(word,puzzle),false);
+      assert.equal(availableLetters(word,{...puzzle,fullKeyboard:true}).length,29);
+    }
+    for (const word of words.filter(w => w.difficulty === 4)) assert.equal(availableLetters(word,createPuzzle(word)).length,29);
+    for (const word of ['HØY','ÅRE','SNØ']) assert.equal(words.find(w => w.word === word)!.difficulty,2);
   });
 });

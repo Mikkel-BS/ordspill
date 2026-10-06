@@ -40,7 +40,7 @@ export function requestHint(puzzle: Puzzle, kind: HintKind): Puzzle {
   return { ...puzzle, hints: [...puzzle.hints, kind] };
 }
 export function usesFullKeyboard(word: Word, puzzle: Puzzle): boolean {
-  return word.difficulty >= 3 || puzzle.fullKeyboard === true;
+  return word.difficulty >= 4 || puzzle.fullKeyboard === true;
 }
 export function availableLetters(word: Word, puzzle: Puzzle): string[] {
   const limited = [...new Set([...word.word, ...(word.clueLetters ?? []), ...'SAEILORNTUB'])];

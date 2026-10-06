@@ -30,12 +30,12 @@ GitHub Actions runs unit tests, the production build and Playwright checks. Play
 
 ## MVP
 
-- 120 manually selected Bokmål answers across four difficulty groups (21 / 41 / 36 / 22). Each has a meaning, example sentence, picture and syllable count.
+- 120 manually selected Bokmål answers across four difficulty groups (21 / 72 / 16 / 11). Each has a meaning, example sentence, picture and syllable count.
 - 38,269 valid Bokmål guesses and inflected forms imported from Norsk ordbank (2022-02-01 snapshot, CC BY 4.0). It is **not an exhaustive or continuously updated Norwegian dictionary**: the interface explains when a word is missing without saying the child's word is wrong.
 - Three to six letters, including Æ, Ø and Å. Words are normalized to uppercase NFC.
-- A visible meaning-based theme clue above every board, also shown on discovery and in the word collection. Themes are independent of difficulty. Every level-2 answer also has a short word-specific meaning clue, supplied as baseline reading support.
+- A visible meaning-based theme clue above every board, also shown on discovery and in the word collection. Themes are independent of difficulty. Every level-2 and level-3 answer also has a short word-specific meaning clue, supplied as baseline reading support.
 - Familiarity, syllables, consonant clusters, double consonants and spelling features inform curated groups. Difficulty is not calculated from length alone.
-- Limited letter selection in groups one and two: level 2 offers 8 letters for three-letter answers and 10 for longer answers. Full Norwegian keyboard from group three; “Vis alle bokstaver” opens it earlier without counting as a hint. Physical keyboards also work within the selected letter set.
+- Limited letter selection in groups one, two and three: level 2 offers 8 letters for three-letter answers and 10 for longer answers. Level 3 keeps ten letter choices, with five- and six-letter words and the same meaning support. Full Norwegian keyboard from group four; “Vis alle bokstaver” opens it earlier without counting as a hint. Physical keyboards also work within the selected letter set.
 - Correct two-pass repeated-letter matching. Exact matches consume letters first, then misplaced matches consume the remaining occurrences.
 - Unlimited guesses. Invalid and repeated guesses do not consume an attempt.
 - Optional picture, first-letter and letter-removal hints, followed by syllable and final-letter help when a child keeps trying.

@@ -11,7 +11,7 @@ describe('meaning-based themes', () => {
       assert.notEqual(theme.id,'ord',word.word);
       assert.ok(theme.title && theme.icon && theme.clue,word.word);
       assert.ok(!(word.clue ?? theme.clue).toUpperCase().split(/[\s.,!?]+/u).includes(word.word),word.word);
-      if (word.difficulty === 2) assert.ok(word.clue,word.word);
+      if (word.difficulty === 2 || word.difficulty === 3) assert.ok(word.clue,word.word);
     }
   });
   it('uses semantically fitting themes for animals, body parts and weather', () => {

@@ -16,7 +16,7 @@ describe('word repository', () => {
       assert.ok(validGuesses[w.language].has(w.word)); assert.ok(w.word.length >= 3 && w.word.length <= 6);
       assert.ok(w.image && w.example && w.definition); assert.ok(w.syllables > 0);
     }
-    for (let level=1;level<=4;level++) assert.ok(words.filter(w => w.difficulty === level).length >= 20);
+    for (let level=1;level<=4;level++) assert.ok(words.filter(w => w.difficulty === level).length >= 10);
     assert.ok(words.some(w => w.difficulty > 1 && w.word.length === 3));
   });
 });
@@ -74,7 +74,7 @@ describe('progression', () => {
     const smallPool = words.filter(w => ['nb-rom','nb-måne'].includes(w.id));
     assert.equal(generatePuzzleWord(smallPool,{...allFound,selectedTheme:'rom',puzzleHistory:[result('nb-måne')]},3).id,'nb-rom');
     // The engine still supports an intentional replay of a singleton pool.
-    assert.equal(generatePuzzleWord(smallPool,{...allFound,selectedTheme:'rom',puzzleHistory:[result('nb-rom')]},2).id,'nb-rom');
+    assert.equal(generatePuzzleWord(smallPool.filter(w => w.id === 'nb-rom'),{...allFound,selectedTheme:'rom',puzzleHistory:[result('nb-rom')]},2).id,'nb-rom');
   });
 });
 describe('local profiles', () => {
