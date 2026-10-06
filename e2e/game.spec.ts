@@ -184,7 +184,9 @@ test('a completed theme offers a different theme and makes replay explicit', asy
   await expect(page.getByRole('button', { name: 'Neste oppdagelse', exact: true })).toHaveCount(0);
   await expect(page.getByText('Temaet er ferdig på dette nivået.', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Spill dette temaet igjen', exact: true }).click();
-  await enterWord(page, 'MÅNE');
+  const replayWord = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].activePuzzle.wordId.slice(3).toLocaleUpperCase('nb-NO'));
+  expect(replayWord).not.toBe('ROM');
+  await enterWord(page, replayWord);
   await page.getByRole('button', { name: 'Utforsk et annet tema', exact: true }).click();
   await expect(page.getByLabel('Hva vil du utforske?')).toHaveValue('all');
   const profile = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0]);
