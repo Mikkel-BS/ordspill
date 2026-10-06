@@ -10,11 +10,12 @@ describe('meaning-based themes', () => {
       const theme = getWordTheme(word);
       assert.notEqual(theme.id,'ord',word.word);
       assert.ok(theme.title && theme.icon && theme.clue,word.word);
-      assert.ok(!theme.clue.toUpperCase().split(/[\s.,]+/u).includes(word.word),word.word);
+      assert.ok(!(word.clue ?? theme.clue).toUpperCase().split(/[\s.,!?]+/u).includes(word.word),word.word);
+      if (word.difficulty === 2) assert.ok(word.clue,word.word);
     }
   });
   it('uses semantically fitting themes for animals, body parts and weather', () => {
-    const expected = { KUA:'gard',SAU:'gard',ULL:'gard',ARM:'kropp',ØYE:'kropp',HJERTE:'kropp',SOL:'vaer',REGN:'vaer',REV:'skog',BÅT:'hav',RAKETT:'rom' };
+    const expected = { KUA:'gard',SAU:'gard',ULL:'gard',EGG:'gard',OST:'mat',KAKE:'mat',EPLE:'mat',BÆR:'mat',SKO:'klar',LUE:'klar',HATT:'klar',KATT:'dyr',HUND:'dyr',KANIN:'dyr',BOK:'lek',BALL:'lek',SNØ:'vaer',SEKK:'fjell',KART:'fjell',ARM:'kropp',ØYE:'kropp',HJERTE:'kropp',SOL:'vaer',REGN:'vaer',REV:'skog',BÅT:'hav',RAKETT:'rom' };
     for (const [word,id] of Object.entries(expected)) assert.equal(getWordTheme(words.find(w=>w.word===word)!).id,id);
   });
   it('uses the first recognized category and safely handles future categories', () => {

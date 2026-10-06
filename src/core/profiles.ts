@@ -18,10 +18,15 @@ export function loadProfiles(storage?: Pick<Storage, 'getItem'>): LocalProfile[]
     return Array.isArray(data) ? data.filter(isProfile).map(p => {
       const validTheme = p.selectedTheme === undefined || isThemeSelection(p.selectedTheme);
       const validLevel = p.selectedLevel === undefined || (Number.isInteger(p.selectedLevel) && p.selectedLevel >= 1 && p.selectedLevel <= p.currentLevel);
-      if (validTheme && validLevel) return p;
+      const validKeyboard = p.activePuzzle?.fullKeyboard === undefined || typeof p.activePuzzle.fullKeyboard === 'boolean';
+      if (validTheme && validLevel && validKeyboard) return p;
       const restored = { ...p };
       if (!validTheme) delete restored.selectedTheme;
       if (!validLevel) delete restored.selectedLevel;
+      if (!validKeyboard && restored.activePuzzle) {
+        restored.activePuzzle = { ...restored.activePuzzle };
+        delete restored.activePuzzle.fullKeyboard;
+      }
       return restored; // Invalid preferences must not erase a child's progress.
     }) : [];
   } catch { return []; }

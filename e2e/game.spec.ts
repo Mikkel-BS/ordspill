@@ -50,6 +50,7 @@ test('full Norwegian keyboard supports Æ Ø Å and symbol feedback', async ({ p
   await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1',JSON.stringify([{id:'test',nickname:'Ola',avatar:0,currentLevel:2,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:'nb-båt',guesses:[],hints:[],solved:false}}])));
   await page.reload(); await page.getByRole('button',{name:/Ola.*0 ord funnet/}).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.getByRole('button', { name: 'Vis alle bokstaver', exact: true }).click();
   for (const letter of ['Æ','Ø','Å']) await expect(page.getByRole('button',{name:letter,exact:true})).toBeEnabled();
   await enterWord(page,'BIL'); await expect(page.getByLabel('B: Riktig plass',{exact:true})).toContainText('✓');
   await enterWord(page,'BÅT'); await expect(page.getByRole('heading',{name:'Du fant båt!'})).toBeVisible();
@@ -74,7 +75,7 @@ test('theme follows the word through play, discovery and collection without coun
   await page.goto('./'); await createPlayer(page, 'Liv');
   const clue = page.getByRole('complementary', { name: 'Temaspor' });
   await expect(clue).toContainText('Tema: Vær og himmel');
-  await expect(clue).toContainText('Vi leter etter noe vi kan se ute eller på himmelen.');
+  await expect(clue).toContainText('Vi leter etter noe som har med været eller himmelen å gjøre.');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await enterWord(page, 'BIL'); // Valid guesses may come from a different theme.
   await expect(page.getByRole('log')).toContainText('B');
@@ -191,4 +192,28 @@ test('a completed singleton theme offers a different theme and makes replay expl
   expect(profile.discoveredWords.filter((id: string) => id === 'nb-rom')).toHaveLength(1);
   expect(profile.puzzleHistory).toHaveLength(2);
   await expect(page.locator('.level-label')).toContainText('Nye spor');
+});
+
+test('level 2 supplies a small keyboard and a useful meaning clue with optional full-keyboard persistence', async ({ page }) => {
+  await page.goto('./');
+  await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'egg-support',nickname:'Liv',avatar:0,currentLevel:2,discoveredWords:[],puzzleHistory:[],activePuzzle:{wordId:'nb-egg',guesses:[],hints:[],solved:false}}])));
+  await page.reload(); await page.getByRole('button', {name:/Liv.*0 ord funnet/}).click();
+  const clue = page.getByRole('complementary', {name:'Temaspor'});
+  await expect(clue).toContainText('Tema: På gården');
+  await expect(clue).toContainText('Høna legger dette. Det har et skall rundt.');
+  await expect(page.locator('.key')).toHaveCount(8);
+  await page.getByRole('button', {name:'E',exact:true}).click();
+  await page.getByRole('button', {name:'Vis alle bokstaver',exact:true}).click();
+  await expect(page.getByLabel('Ditt ord: E', {exact:true})).toContainText('E');
+  await expect(page.locator('.key')).toHaveCount(29);
+  await page.getByRole('button', {name:'Slett siste bokstav'}).click();
+  await enterWord(page,'BIL');
+  await page.reload(); await page.getByRole('button', {name:/Liv.*0 ord funnet/}).click();
+  await expect(page.locator('.key')).toHaveCount(29);
+  await expect(page.getByRole('log')).toContainText('B');
+  await enterWord(page,'EGG');
+  await expect(page.getByRole('heading', {name:'Du fant egg!'})).toBeVisible();
+  const history = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0].puzzleHistory);
+  expect(history[0].independent).toBe(true); expect(history[0].hints).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });

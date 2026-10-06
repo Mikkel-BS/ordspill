@@ -5,7 +5,7 @@ export function ThemeClue({ word }: { word: Word }) {
   const theme = getWordTheme(word);
   return <aside className="theme-clue" aria-label="Temaspor">
     <span className="theme-icon" aria-hidden="true">{theme.icon}</span>
-    <div><span className="theme-title">Tema: {theme.title}</span><p>{theme.clue}</p></div>
+    <div><span className="theme-title">Tema: {theme.title}</span><p>{word.clue ?? theme.clue}</p></div>
   </aside>;
 }
 

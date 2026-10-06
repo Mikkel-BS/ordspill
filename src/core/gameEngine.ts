@@ -39,8 +39,13 @@ export function requestHint(puzzle: Puzzle, kind: HintKind): Puzzle {
   if (puzzle.solved || puzzle.hints.includes(kind)) return puzzle;
   return { ...puzzle, hints: [...puzzle.hints, kind] };
 }
+export function usesFullKeyboard(word: Word, puzzle: Puzzle): boolean {
+  return word.difficulty >= 3 || puzzle.fullKeyboard === true;
+}
 export function availableLetters(word: Word, puzzle: Puzzle): string[] {
-  const pool = word.difficulty === 1 ? [...new Set([...(word.clueLetters ?? []), ...word.word])] : Array.from(ALPHABET);
+  const limited = [...new Set([...word.word, ...(word.clueLetters ?? []), ...'SAEILORNTUB'])];
+  const budget = word.difficulty === 1 ? 12 : word.word.length <= 3 ? 8 : 10;
+  const pool = usesFullKeyboard(word, puzzle) ? Array.from(ALPHABET) : limited.slice(0, budget);
   return puzzle.hints.includes('remove-letters') ? pool.filter(letter => word.word.includes(letter)) : pool;
 }
 export function keyboardFeedback(word: Word, puzzle: Puzzle): Record<string, LetterFeedback['state']> {
