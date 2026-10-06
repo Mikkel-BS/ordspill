@@ -176,7 +176,7 @@ test('theme and practice difficulty remain separate with explicit fallback to al
   await expect(page.getByRole('complementary', { name: 'Temaspor' })).toContainText('Tema: Ved havet');
 });
 
-test('a completed singleton theme offers a different theme and makes replay explicit', async ({ page }) => {
+test('a completed theme offers a different theme and makes replay explicit', async ({ page }) => {
   await page.goto('./');
   await page.evaluate(() => localStorage.setItem('ordreise:profiles:v1', JSON.stringify([{id:'rom-repeat',nickname:'Ane',avatar:0,currentLevel:2,discoveredWords:['nb-sol','nb-bil','nb-hus','nb-rev','nb-mus','nb-kua','nb-sau','nb-lam','nb-måne','nb-jord'],puzzleHistory:[],selectedTheme:'rom'}])));
   await page.reload(); await page.getByRole('button', { name: /Ane.*10 ord funnet/ }).click();
@@ -184,7 +184,7 @@ test('a completed singleton theme offers a different theme and makes replay expl
   await expect(page.getByRole('button', { name: 'Neste oppdagelse', exact: true })).toHaveCount(0);
   await expect(page.getByText('Temaet er ferdig på dette nivået.', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Spill dette temaet igjen', exact: true }).click();
-  await enterWord(page, 'ROM');
+  await enterWord(page, 'MÅNE');
   await page.getByRole('button', { name: 'Utforsk et annet tema', exact: true }).click();
   await expect(page.getByLabel('Hva vil du utforske?')).toHaveValue('all');
   const profile = await page.evaluate(() => JSON.parse(localStorage.getItem('ordreise:profiles:v1')!)[0]);
