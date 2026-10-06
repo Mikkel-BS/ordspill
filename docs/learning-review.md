@@ -30,3 +30,9 @@ Primary themes follow the meaning being taught, rather than every location where
 ## Difficulty groups
 
 Level 1: 21 words, Level 2: 41 words, Level 3: 36 words, Level 4: 22 words.
+
+## Follow-up: level 3 bridge — 2026-10-06
+
+Keep level 2's limited keyboard and word-specific meaning support through level 3. The full keyboard is now automatic only at level 4 (still optional earlier). Every level-3 word has 5–6 letters, ten available letter choices and a semantic clue. Familiar longer words BANAN, KANIN, GULROT and SKOLE move into level 3. SNØ, ÅRE and HØY use level 2's existing semantic clues and limited keyboard instead of occupying the longer-word group. Existing level-2 words and clues are unchanged. Updated counts: 21 / 72 / 16 / 11. This supersedes the earlier placement of HØY and ÅRE and the earlier full-keyboard threshold. Word IDs and saved progress remain compatible.
+
+Four-letter words keep level-2 support. Longer familiar words BJØRN, FJELL, RAKETT, HJERTE, SYKKEL, NØKKEL and SITRON also join the supported level-3 group, each with a concrete meaning clue. The earlier recommendation to postpone MOSE is superseded by retaining concrete meaning support for all four-letter answers.

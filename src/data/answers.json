@@ -861,8 +861,8 @@
     "id": "nb-hest",
     "word": "HEST",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "gard"
     ],
@@ -886,14 +886,15 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et stort dyr på gården som du kan ri på."
   },
   {
     "id": "nb-ugle",
     "word": "UGLE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "skog"
     ],
@@ -918,14 +919,15 @@
       "N",
       "T",
       "B"
-    ]
+    ],
+    "clue": "En fugl med store øyne som ofte jakter om natten."
   },
   {
     "id": "nb-eple",
     "word": "EPLE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "mat"
     ],
@@ -950,14 +952,15 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En rund frukt som vokser på trær og kan være rød eller grønn."
   },
   {
     "id": "nb-pære",
     "word": "PÆRE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "mat"
     ],
@@ -981,14 +984,15 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En saftig frukt som er smal øverst og rund nederst."
   },
   {
     "id": "nb-kake",
     "word": "KAKE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "mat"
     ],
@@ -1012,14 +1016,15 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Noe søtt vi baker og ofte deler på bursdager."
   },
   {
     "id": "nb-bord",
     "word": "BORD",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hjem"
     ],
@@ -1043,14 +1048,15 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et møbel med en flat plate som vi kan sette ting på."
   },
   {
     "id": "nb-stol",
     "word": "STOL",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hjem"
     ],
@@ -1073,14 +1079,15 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et møbel som én person kan sitte på."
   },
   {
     "id": "nb-skog",
     "word": "SKOG",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "skog"
     ],
@@ -1104,14 +1111,15 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et område der mange trær vokser sammen."
   },
   {
     "id": "nb-regn",
     "word": "REGN",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "vaer"
     ],
@@ -1136,14 +1144,15 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Vanndråper som faller fra skyene."
   },
   {
     "id": "nb-måne",
     "word": "MÅNE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "rom"
     ],
@@ -1167,14 +1176,15 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Den går rundt jorda og lyser med lys fra sola."
   },
   {
     "id": "nb-hund",
     "word": "HUND",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "dyr"
     ],
@@ -1198,7 +1208,8 @@
       "O",
       "R",
       "T"
-    ]
+    ],
+    "clue": "Et kjæledyr som bjeffer og kan logre med halen."
   },
   {
     "id": "nb-frosk",
@@ -1229,14 +1240,15 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et lite dyr som kan hoppe og ofte lever ved en dam."
   },
   {
     "id": "nb-fugl",
     "word": "FUGL",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "skog"
     ],
@@ -1261,14 +1273,15 @@
       "R",
       "N",
       "T"
-    ]
+    ],
+    "clue": "Et dyr med fjær, nebb og vinger."
   },
   {
     "id": "nb-snø",
     "word": "SNØ",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "vaer"
     ],
@@ -1292,13 +1305,14 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Små, hvite iskrystaller som faller fra skyene."
   },
   {
     "id": "nb-banan",
     "word": "BANAN",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "mat"
@@ -1322,13 +1336,14 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En lang frukt med gult skall som du kan skrelle."
   },
   {
     "id": "nb-kanin",
     "word": "KANIN",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "dyr"
@@ -1353,13 +1368,14 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et kjæledyr med lange ører som kan hoppe."
   },
   {
     "id": "nb-bjørn",
     "word": "BJØRN",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "skog"
@@ -1384,7 +1400,8 @@
       "L",
       "O",
       "T"
-    ]
+    ],
+    "clue": "Et stort dyr i skogen med tykk pels som gjerne spiser bær."
   },
   {
     "id": "nb-blomst",
@@ -1421,7 +1438,7 @@
     "id": "nb-rakett",
     "word": "RAKETT",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "rom"
@@ -1448,13 +1465,14 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Den kan sende mennesker og ting ut i verdensrommet."
   },
   {
     "id": "nb-fjell",
     "word": "FJELL",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "fjell"
@@ -1480,7 +1498,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "En høy del av landskapet som kan ha snø på toppen."
   },
   {
     "id": "nb-skjell",
@@ -1519,7 +1538,7 @@
     "id": "nb-hjerte",
     "word": "HJERTE",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "kropp"
@@ -1546,13 +1565,14 @@
       "O",
       "N",
       "U"
-    ]
+    ],
+    "clue": "Det pumper blod rundt i kroppen og slår raskere når du løper."
   },
   {
     "id": "nb-sykkel",
     "word": "SYKKEL",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "byen"
@@ -1580,13 +1600,14 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Den har to hjul og pedaler som du trår på for å komme fram."
   },
   {
     "id": "nb-nøkkel",
     "word": "NØKKEL",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "hjem"
@@ -1613,13 +1634,14 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Du bruker den for å låse opp en lås."
   },
   {
     "id": "nb-gulrot",
     "word": "GULROT",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "mat"
@@ -1645,13 +1667,14 @@
       "I",
       "N",
       "B"
-    ]
+    ],
+    "clue": "En oransje grønnsak som vokser nede i jorda."
   },
   {
     "id": "nb-skole",
     "word": "SKOLE",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "byen"
@@ -1677,7 +1700,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et sted der barn lærer og møter venner."
   },
   {
     "id": "nb-bølge",
@@ -1804,8 +1828,8 @@
     "id": "nb-alge",
     "word": "ALGE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hav"
     ],
@@ -1830,7 +1854,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Noe som vokser i vann og bruker sollys."
   },
   {
     "id": "nb-krabbe",
@@ -1894,14 +1919,15 @@
       "R",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et mykt dyr i sjøen som kan ha lange tråder under kroppen."
   },
   {
     "id": "nb-tang",
     "word": "TANG",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hav"
     ],
@@ -1925,14 +1951,15 @@
       "R",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Store alger som vokser i sjøen og kan skylle opp på stranda."
   },
   {
     "id": "nb-hval",
     "word": "HVAL",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hav"
     ],
@@ -1956,7 +1983,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et stort dyr i havet som kommer opp til overflaten for å puste."
   },
   {
     "id": "nb-reke",
@@ -1994,8 +2022,8 @@
     "id": "nb-sand",
     "word": "SAND",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hav"
     ],
@@ -2019,7 +2047,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Mange små korn av stein som vi kan finne på stranda."
   },
   {
     "id": "nb-anker",
@@ -2057,8 +2086,8 @@
     "id": "nb-åre",
     "word": "ÅRE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "hav"
     ],
@@ -2180,8 +2209,8 @@
     "id": "nb-telt",
     "word": "TELT",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "fjell"
     ],
@@ -2204,7 +2233,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et lite hus av stoff som vi kan sove i på tur."
   },
   {
     "id": "nb-sekk",
@@ -2267,7 +2297,8 @@
       "R",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En hard bit av fjell som kan være liten eller stor."
   },
   {
     "id": "nb-topp",
@@ -2337,8 +2368,8 @@
     "id": "nb-kart",
     "word": "KART",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "fjell"
     ],
@@ -2362,14 +2393,15 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Det viser hvor steder ligger og hjelper oss å finne veien."
   },
   {
     "id": "nb-jord",
     "word": "JORD",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "rom"
     ],
@@ -2394,7 +2426,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Planeten vi bor på, og som går rundt sola."
   },
   {
     "id": "nb-rom",
@@ -2487,7 +2520,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et stort, rundt himmellegeme, slik som planeten vi bor på."
   },
   {
     "id": "nb-meteor",
@@ -2677,8 +2711,8 @@
     "id": "nb-hånd",
     "word": "HÅND",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "kropp"
     ],
@@ -2703,7 +2737,8 @@
       "O",
       "R",
       "T"
-    ]
+    ],
+    "clue": "Den har fingre som du kan gripe ting og vinke med."
   },
   {
     "id": "nb-bein",
@@ -2835,8 +2870,8 @@
     "id": "nb-vind",
     "word": "VIND",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "vaer"
     ],
@@ -2860,7 +2895,8 @@
       "R",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Luft som beveger seg og får flagget til å vaie."
   },
   {
     "id": "nb-sky",
@@ -3057,8 +3093,8 @@
     "id": "nb-maur",
     "word": "MAUR",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "skog"
     ],
@@ -3082,7 +3118,8 @@
       "N",
       "T",
       "B"
-    ]
+    ],
+    "clue": "Et lite insekt som kan bo i en tue med mange andre."
   },
   {
     "id": "nb-bær",
@@ -3118,8 +3155,8 @@
     "id": "nb-mose",
     "word": "MOSE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "skog"
     ],
@@ -3214,8 +3251,8 @@
     "id": "nb-geit",
     "word": "GEIT",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "gard"
     ],
@@ -3239,7 +3276,8 @@
       "N",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et gårdsdyr som ofte har horn og skjegg og er flink til å klatre."
   },
   {
     "id": "nb-høne",
@@ -3277,8 +3315,8 @@
     "id": "nb-gris",
     "word": "GRIS",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "gard"
     ],
@@ -3302,7 +3340,8 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Et gårdsdyr med tryne som kan rote i jorda."
   },
   {
     "id": "nb-and",
@@ -3340,8 +3379,8 @@
     "id": "nb-høy",
     "word": "HØY",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "gard"
     ],
@@ -3464,8 +3503,8 @@
     "id": "nb-park",
     "word": "PARK",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "byen"
     ],
@@ -3489,7 +3528,8 @@
       "N",
       "T",
       "U"
-    ]
+    ],
+    "clue": "Et grønt område i byen der vi kan gå og leke."
   },
   {
     "id": "nb-butikk",
@@ -3552,13 +3592,14 @@
       "T",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En stor frukt med saftig fruktkjøtt som vi kan dele i biter."
   },
   {
     "id": "nb-sitron",
     "word": "SITRON",
     "language": "nb",
-    "difficulty": 4,
+    "difficulty": 3,
     "ageBand": "middle",
     "categories": [
       "mat"
@@ -3583,14 +3624,15 @@
       "L",
       "U",
       "B"
-    ]
+    ],
+    "clue": "En gul frukt som smaker surt."
   },
   {
     "id": "nb-drue",
     "word": "DRUE",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "mat"
     ],
@@ -3615,7 +3657,8 @@
       "N",
       "T",
       "B"
-    ]
+    ],
+    "clue": "En liten frukt som vokser i klaser."
   },
   {
     "id": "nb-løk",
@@ -3651,8 +3694,8 @@
     "id": "nb-nøtt",
     "word": "NØTT",
     "language": "nb",
-    "difficulty": 3,
-    "ageBand": "middle",
+    "difficulty": 2,
+    "ageBand": "early",
     "categories": [
       "mat"
     ],
@@ -3676,7 +3719,8 @@
       "R",
       "U",
       "B"
-    ]
+    ],
+    "clue": "Den har et hardt skall rundt en kjerne. Ekornet liker den."
   },
   {
     "id": "nb-lue",
